@@ -23,8 +23,9 @@ but thats NOT what we want.
 
 ## TODO
 
+- test/enhance import resolver (with webpack)
 - TEST on other workstations (especially on MAC)
-- add eslint-plugin-node + some customized rules (not just all recommended)
 - shove eslint/prettier RC files into /config
-- finetune rules (take some from /logger and rest from /eslint-config-stackr23)
+- add eslint-plugin-jsx
+- optional
   - add '[eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)'
