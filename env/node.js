@@ -24,11 +24,11 @@ module.exports = {
     // TODO: clearify (and refactor?) resolver settings
     'import/resolver': {
       node: {
-        paths:      ['.'],
-        extensions: [ '.js', '.jsx' ],
+        // paths:      ['.'],
+        // extensions: [ '.js', '.jsx' ],
       },
       webpack: {
-        paths:      [ './src', './__tests__' ],
+        paths:      [ 'src', '__tests__' ],
         extensions: [ '.js', '.jsx' ],
       },
     },
@@ -36,9 +36,10 @@ module.exports = {
       lifetime: 5,
     },
   },
-  plugins: [ 'react', 'import', 'promise' ],
+  plugins: [ 'node', 'react', 'import', 'promise' ],
   extends: [
     'eslint:recommended',
+    'plugin:node/recommended',
     'plugin:import/warnings',
     'plugin:import/errors',
     'plugin:promise/recommended',
