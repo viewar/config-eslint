@@ -49,29 +49,114 @@ module.exports = {
      * should match .prettierrc config
      * otherwise you'll see eslint re-formating prettier changes
      */
-    'max-len': ['error', 90], // printWidth
+    // printWidth
+    'max-len': [
+      'warn',
+      120,
+      {
+        ignoreComments: true,
+      },
+    ],
     indent: [
       'error',
       2,
       {
-        VariableDeclarator: { var: 2, let: 2, const: 1 },
+        VariableDeclarator: {
+          var: 2,
+          let: 2,
+          const: 1,
+        },
         ignoreComments: false,
       },
     ],
     semi: ['error', 'always'], // semi
     quotes: ['error', 'single'], // singleQuote
+    'comma-spacing': [
+      'error',
+      {
+        before: false,
+        after: true,
+      },
+    ],
     'comma-dangle': ['error', 'always-multiline'], // trailingComma
     'arrow-parens': ['error', 'always'],
-    'object-curly-spacing': ['error', 'always'], // bracketSpacing
     'react/jsx-closing-bracket-location': [1, 'line-aligned'],
 
     // format
+    'quote-props': [
+      'error',
+      'as-needed',
+      {
+        keywords: true,
+        unnecessary: false,
+      },
+    ],
+    'object-property-newline': [
+      'error',
+      {
+        allowMultiplePropertiesPerLine: false,
+      },
+    ],
+    'object-curly-newline': [
+      'error',
+      {
+        ObjectPattern: { multiline: true },
+        ImportDeclaration: 'never',
+        ExportDeclaration: {
+          multiline: true,
+        },
+      },
+    ],
+    'object-curly-spacing': [
+      'error',
+      'always',
+      {
+        objectsInObjects: false,
+        arraysInObjects: false,
+      },
+    ],
+    'array-element-newline': [
+      'error',
+      {
+        multiline: false,
+      },
+    ],
+    // 'array-bracket-newline':   [
+    //   'error',
+    //   {
+    //     multiline: true,
+    //     minItems:  5
+    //   }
+    // ],
+    'array-bracket-spacing': [
+      'error',
+      'always',
+      {
+        singleValue: false,
+        objectsInArrays: false,
+      },
+    ],
+
+    'brace-style': [
+      'error',
+      'stroustrup',
+      {
+        allowSingleLine: true,
+      },
+    ],
     'space-before-function-paren': [
       'error',
       {
         anonymous: 'never',
         named: 'never',
         asyncArrow: 'always',
+      },
+    ],
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 2,
+        maxEOF: 1,
       },
     ],
     'no-multi-spaces': [
@@ -82,6 +167,7 @@ module.exports = {
           ImportDeclaration: true,
           AssignmentExpression: true,
           ClassProperty: true,
+          ImportDeclaration: true,
         },
       },
     ],
@@ -108,13 +194,18 @@ module.exports = {
         align: {
           beforeColon: false,
           afterColon: true,
-          mode: 'minimum',
+          mode: 'strict',
           on: 'value',
         },
       },
     ],
-    'keyword-spacing': ['error', { before: true, after: true }],
-    'no-multi-spaces': 0,
+    'keyword-spacing': [
+      'error',
+      {
+        before: true,
+        after: true,
+      },
+    ],
     // import
     'import/no-unresolved': 2,
     'sort-imports': [
