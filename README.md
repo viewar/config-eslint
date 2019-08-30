@@ -23,7 +23,8 @@ but thats NOT what we want.
 
 ## TODO
 
-- test/enhance import resolver (with webpack)
+- add eslint-plugin-jsdoc
+- test/enhance import resolver (with eslint-resolver-webpack)
 - TEST on other workstations (especially on MAC)
 - shove eslint/prettier RC files into /config
 - add eslint-plugin-jsx
