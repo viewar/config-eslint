@@ -24,6 +24,7 @@ but thats NOT what we want.
 ## TODO
 
 - add eslint-plugin-jsdoc
+- add eslint-config-standard (without eslint-plugin-standard)
 - test/enhance import resolver (with eslint-resolver-webpack)
 - TEST on other workstations (especially on MAC)
 - shove eslint/prettier RC files into /config
