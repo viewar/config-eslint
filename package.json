@@ -16,8 +16,6 @@
         "@babel/preset-env",
         {
           "modules": "commonjs",
-          "node": true,
-          "comments": true,
           "targets": {
             "esmodules": true,
             "browsers": [
