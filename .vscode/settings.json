@@ -1,9 +1,11 @@
 {
   // FORMATATION and LINTING
-  "javascript.format.enable": false,
   "javascript.validate.enable": false,
-  // "editor.defaultFormatter": "teeLang.vsprettier",
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "javascript.format.enable": false,
+  "editor.defaultFormatter": "teeLang.vsprettier",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
