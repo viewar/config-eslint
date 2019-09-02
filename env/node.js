@@ -34,8 +34,9 @@ module.exports = {
     // },
     'import/cache': { lifetime: 5 },
   },
-  plugins:   [ 'node', 'react', 'import', 'promise' ],
+  plugins:   [ 'promise', 'node', 'react', 'import' ],
   'extends': [
+    'standard',
     'eslint:recommended',
     'plugin:node/recommended',
     'plugin:import/warnings',
@@ -66,6 +67,8 @@ module.exports = {
       allowShortCircuit: true,
       allowTernary:      true,
     }],
+
+    // eqeqeq: [ 'error', 'always', { 'null': 'ignore' }],
 
     /**
      * PRETTIER equivalents

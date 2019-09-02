@@ -1,4 +1,4 @@
-let failedImport = require('../env/node.js');
+const failedImport = require('../env/node.js');
 const { failedImportNamed } = require('../env/node');
 
 const myObject = {
@@ -9,17 +9,17 @@ const myObject = {
 };
 
 const test = () => {
-  if (var1 === 'test') {
+  if (myObject == 'test') {
     const test1 = true;
     const test2 = false;
   }
   console.log('failedImportNamed :', failedImportNamed);
 
-  let test = true,
+  const test = true,
       test2 = false;
 };
 
-let testObject = {
+const testObject = {
   test: 'fdsfg',
   foo:  'bar',
 };
