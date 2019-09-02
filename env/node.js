@@ -45,7 +45,6 @@ module.exports = {
     // TODO: refactor: move into corresponding env
     require.resolve('../rules/import.js'),
     require.resolve('../rules/node.js'),
-    require.resolve('../rules/standard.js'),
   ],
 
   rules: {

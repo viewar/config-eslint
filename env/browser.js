@@ -13,30 +13,23 @@ module.exports = {
     node: false,
   },
 
-  plugins: [
-    // 'standard',
-    'promise',
-  ],
+  plugins: [ 'promise' ],
 
   'extends': [
     'eslint:recommended',
-    'standard',
     'plugin:promise/recommended',
     // TODO: rules
-    // ...[
-    //   '../rules/standard.js',
-    //   '../rules/overwrites.js',
-    // ].map(require.resolve),
+    ...[
+      '../rules/standard.js',
+      '../rules/standard-overwrites.js',
+      '../rules/promise.js',
+    ].map(require.resolve),
   ],
 
   globals: {
-    document:  true,
-    navigator: true,
-    window:    true,
-  },
-
-  rules: {
-    // overwrites/additions for 'plugin:promise/recommended'
-    // TODO: env/browser -> add standard rules (without plugins)
+    document:  false,
+    navigator: false,
+    window:    false,
+    console:   false,
   },
 };
