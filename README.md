@@ -3,10 +3,12 @@
 ## how to
 
 **install basic libaries**  
-`npm i -D prettier eslint`
+`npm i -D prettier eslint eslint-formatter-pretty eslint-plugin-promise`
 
 **install helpers and plugins**  
-`npm i -D babel-eslint eslint-formatter-pretty eslint-plugin-standard eslint-plugin-promise eslint-plugin-node eslint-plugin-import eslint-plugin-react eslint-import-resolver-webpack`
+`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-plugin-react`
+
+<!--- eslint-import-resolver-webpack --->
 
 ## setup
 

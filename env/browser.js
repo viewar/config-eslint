@@ -13,14 +13,10 @@ module.exports = {
     node: false,
   },
 
-  plugins: [
-    // 'standard',
-    'promise',
-  ],
+  plugins: [ 'promise' ],
 
   'extends': [
     'eslint:recommended',
-    'standard',
     'plugin:promise/recommended',
     // RULES
     ...[
@@ -31,13 +27,9 @@ module.exports = {
   ],
 
   globals: {
-    document:  true,
-    navigator: true,
-    window:    true,
-  },
-
-  rules: {
-    // overwrites/additions for 'plugin:promise/recommended'
-    // TODO: env/browser -> add standard rules (without plugins)
+    document:  false,
+    navigator: false,
+    window:    false,
+    console:   false,
   },
 };

@@ -1,8 +1,8 @@
 module.exports = {
-  // add overwrites/additions for 'plugin:import/recommended'
+  // add overwrites/additions for 'plugin:promise/recommended'
   rules: {
     //
-    // import-rules of 'eslint-config-standard@1.4.1' (MIT license)
+    // promise-rules of 'eslint-config-standard@1.4.1' (MIT license)
     //
     'import/export':                   'error',
     'import/first':                    'error',
@@ -15,7 +15,7 @@ module.exports = {
     'import/no-named-default':         'error',
     'import/no-webpack-loader-syntax': 'error',
     //
-    // custom import-rules
+    // custom promise-rules
     //
     'import/no-unresolved':            [ 'error', {
       commonjs: true,
