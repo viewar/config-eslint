@@ -1,35 +1,70 @@
 # Formating and Linting
 
-## how to
+## Usage
 
-**install basic libaries**  
+### installation (modules)
+
+**basic libaries**  
 `npm i -D prettier eslint eslint-formatter-pretty eslint-plugin-promise`
 
-**install helpers and plugins**  
+**env/node**  
+`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import`
+
+**env/react**  
 `npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-plugin-react`
 
+### configuration
+
+```javascript
+// .eslintrc
+{ "extends": ["viewar/env/react"] } // thats all!
+```
+
+### integration (VsCode)
+
+#### install extensions
+
+- "teeLang.vsprettier"
+- "dbaeumer.vscode-eslint"
+
+#### configure vscode
+
+```javascript
+// .vscode/settings.json
+// (workspace or global)
+{
+  "javascript.validate.enable": false,
+  "javascript.format.enable": false,
+  "editor.defaultFormatter": "teeLang.vsprettier",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSaveTimeout": 500,
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.run": "onType",
+  "vsprettier.packageManager": "npm",
+  "vsprettier.useEsLint": true,
+  "vsprettier.useStyleLint": true,
+  "vsprettier.requireConfig": true,
+  "eslint.lintTask.enable": true,
+  "eslint.workingDirectories": [
+    { "directory": ".", "changeProcessCWD": false },
+    { "directory": "src", "changeProcessCWD": true }
+  ]
+}
+
+```
+
+### TBD - prettier
+
+- provide export of .prettier
+  use `process.cwd()` for correct require-path!?
+
 <!--- eslint-import-resolver-webpack --->
-
-## setup
-
-> [prettier](https://prettier.io) + [EsLint](https://eslint.org/) = [prettier-eslint](https://github.com/prettier/prettier-eslint-cli)
-
-**why both?**
-
-- **prettier is a formatter**
-  ** limited options
-  ** formatting makes code sometimes unreadable  
-  eslint-features (alignment, advanced bracket styles, jsx formats, ...)
-- **eslint is a linter**  
-  ** checks for errors and pitfalls in code (undefined vars, broken imports, const assignments, ...)
-  ** helps to enforce "best-practise" (===, no-param-reassignments, ...)
-  \*\* provides logical formatting
-
-reason to NOT use eslint-plugin-prettier:  
-prettier formatations often collide with eslint formatting
-there is an eslint-config-prettier, that disables/overrules the eslint rules, which are colliding with eslint  
-but thats NOT what we want.
-(align, key-spacing, consecutive assignments, multiple-linebreaks (f.e. between import-groups))
 
 ## Roadmap
 
