@@ -1,3 +1,9 @@
+const CONSTANTS = {
+  extensions: {
+    modules: [ '.js', '.jsx' ],
+  },
+};
+
 module.exports = {
   env: {
     es6:     true,
@@ -16,25 +22,28 @@ module.exports = {
   },
   settings: {
     engines: { node: '>=12.0.0' },
+    node:    {
+      tryExtensions: [ ...CONSTANTS.extensions.modules ],
+    },
     react:   {
       createClass: 'createReactClass',
       version:     '16.0.9',
       flowVersion: '0.53', // Flow version
     },
     // TODO: clearify (and refactor?) resolver settings
-    // 'import/resolver': {
-    //   node: {
-    //     paths:      [ '.' ],
-    //     extensions: [ '.js' ],
-    //   },
-    //   webpack: {
-    //     paths:      [ 'src', '__tests__' ],
-    //     extensions: [ '.js', '.jsx' ],
-    //   },
-    // },
+    'import/resolver': {
+      node: {
+        paths:      [ './config' ],
+        extensions: [ '.js' ],
+      },
+      webpack: {
+        paths:      [ './src' ],
+        extensions: [ ...CONSTANTS.extensions.modules ],
+      },
+    },
     'import/cache': { lifetime: 5 },
   },
-  plugins:   [ 'promise', 'node', 'react', 'import' ],
+  plugins:   [ 'promise', 'node', 'import', 'react' ],
   'extends': [
     'standard',
     'eslint:recommended',
@@ -57,10 +66,10 @@ module.exports = {
     'no-undefined':   'error', // use "null" instead of undefined
     'no-undef':       [ 'error' ],
     'no-unused-vars': [ 'warn', {
-      args:               'after-used',
       vars:               'local',
+      caughtErrors:       'none',
+      args:               'none',
       ignoreRestSiblings: true,
-      caughtErrors:       'all',
     }],
 
     'no-unused-expressions': [ 'error', {
@@ -188,7 +197,7 @@ module.exports = {
     // import
     'import/no-unresolved': [ 'error', {
       commonjs: true,
-      amd:      true,
+      amd:      false,
     }],
     'sort-imports':         [ 2, {
       ignoreCase:            false,
@@ -200,5 +209,12 @@ module.exports = {
       'newlines-between': 'always',
       groups:             [ 'builtin', 'external', 'internal', 'parent', 'sibling', 'index' ],
     }],
+    /**
+     * NODE
+     */
+    'node/no-unpublished-require':            0,
+    // depracated!
+    // see https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md
+    'node/no-unsupported-features/es-syntax': 0,
   },
 };

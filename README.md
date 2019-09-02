@@ -1,5 +1,13 @@
 # Formating and Linting
 
+## how to
+
+**install basic libaries**  
+`npm i -D prettier eslint`
+
+**install helpers and plugins**  
+`npm i -D babel-eslint eslint-formatter-pretty eslint-plugin-standard eslint-plugin-promise eslint-plugin-node eslint-plugin-import eslint-plugin-react eslint-import-resolver-webpack`
+
 ## setup
 
 > [prettier](https://prettier.io) + [EsLint](https://eslint.org/) = [prettier-eslint](https://github.com/prettier/prettier-eslint-cli)
@@ -32,6 +40,13 @@ but thats NOT what we want.
 
 ## TODO
 
+- use env-based exports (/browser, /node, /react)
+- move `.eslintrc` to /config ?
+  - add path to vscode settings
+- use .vscode/settings from this packages
+- use .prettierrc from this package
+- `npm run format`
+- stage-lint
 - add eslint-plugin-jsdoc
 - test/enhance import resolver (with eslint-resolver-webpack)
 - TEST on other workstations (especially on MAC)
@@ -39,3 +54,12 @@ but thats NOT what we want.
 - add eslint-plugin-jsx
 - optional
   - add '[eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)'
+
+## ISSUES
+
+- `node/no-unpublished-require`  
+  `plugin:node/recommended` demands to have used modules in dependencies (!devDependencies)
+  => turn off rule? => shove into node-specific setup
+- named imports not checked on require-syntax
+- import/order - instant imports are ignored,  
+  which does mess up the import order (no empty line between groups)
