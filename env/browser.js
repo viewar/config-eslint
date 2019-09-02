@@ -22,11 +22,12 @@ module.exports = {
     'eslint:recommended',
     'standard',
     'plugin:promise/recommended',
-    // TODO: rules
-    // ...[
-    //   '../rules/standard.js',
-    //   '../rules/overwrites.js',
-    // ].map(require.resolve),
+    // RULES
+    ...[
+      '../rules/standard.js',
+      '../rules/standard-overwrites.js',
+      '../rules/promise.js',
+    ].map(require.resolve),
   ],
 
   globals: {
