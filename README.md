@@ -49,11 +49,13 @@ but thats NOT what we want.
 - stage-lint
 - add eslint-plugin-jsdoc
 - test/enhance import resolver (with eslint-resolver-webpack)
+  - try to use 'eslint-import-resolver-babel-module' (without webpack resolver)
 - TEST on other workstations (especially on MAC)
 - shove eslint/prettier RC files into /config
 - add eslint-plugin-jsx
 - optional
   - add '[eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)'
+- clearify usage of "extend->require.resolve" vs "...require()"
 
 ## ISSUES
 

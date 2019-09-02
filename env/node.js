@@ -1,84 +1,54 @@
-const CONSTANTS = {
-  extensions: {
-    modules: [ '.js', '.jsx' ],
-  },
-};
+// TODO: babel-register only for react/webpack
+require('../utils/babelRegister');
+
+const CONSTANTS = require('../utils/constants');
 
 module.exports = {
   env: {
-    es6:     true,
     node:    true,
+    es6:     false,
     browser: false,
   },
+  // parser:        'babel-eslint',
   parser:        'babel-eslint',
   parserOptions: {
     ecmaVersion:  2019,
     sourceType:   'module',
     ecmaFeatures: {
-      jsx:     true,
-      classes: true,
       modules: true,
+      jsx:     false,
+      classes: false,
     },
   },
   settings: {
-    engines: { node: '>=12.0.0' },
+    // 'engines' config is taken from package.js
+    // engines: { node: '>=10.0.0' },
     node:    {
       tryExtensions: [ ...CONSTANTS.extensions.modules ],
     },
-    react:   {
-      createClass: 'createReactClass',
-      version:     '16.0.9',
-      flowVersion: '0.53', // Flow version
-    },
-    // TODO: clearify (and refactor?) resolver settings
     'import/resolver': {
       node: {
-        paths:      [ './config' ],
+        paths:      [ '.' ],
         extensions: [ '.js' ],
       },
-      webpack: {
-        paths:      [ './src' ],
-        extensions: [ ...CONSTANTS.extensions.modules ],
-      },
     },
-    'import/cache': { lifetime: 5 },
+    // 'import/cache': { lifetime: 5 },
   },
-  plugins:   [ 'promise', 'node', 'import', 'react' ],
+  plugins:   [ 'promise', 'node', 'import' ],
   'extends': [
-    'standard',
-    'eslint:recommended',
+    require.resolve('../env/browser.js'),
+    // RULES
     'plugin:node/recommended',
     'plugin:import/warnings',
     'plugin:import/errors',
-    'plugin:promise/recommended',
-    'plugin:react/recommended',
+    // RULES
+    // TODO: refactor: move into corresponding env
+    require.resolve('../rules/import.js'),
+    require.resolve('../rules/node.js'),
+    require.resolve('../rules/standard.js'),
   ],
 
   rules: {
-    // STANDARD OVERWRITES/ADDITIONS
-    camelcase: [ 'error', {
-      ignoreDestructuring: true,
-      properties:          'never', // ignores properites case
-    }],
-    'block-spacing': [ 'error', 'always' ],
-    yoda:            [ 'error', 'never' ],
-
-    'no-undefined':   'error', // use "null" instead of undefined
-    'no-undef':       [ 'error' ],
-    'no-unused-vars': [ 'warn', {
-      vars:               'local',
-      caughtErrors:       'none',
-      args:               'none',
-      ignoreRestSiblings: true,
-    }],
-
-    'no-unused-expressions': [ 'error', {
-      allowShortCircuit: true,
-      allowTernary:      true,
-    }],
-
-    // eqeqeq: [ 'error', 'always', { 'null': 'ignore' }],
-
     /**
      * PRETTIER equivalents
      * should match .prettierrc config
@@ -102,10 +72,8 @@ module.exports = {
     }],
     'comma-dangle':                       [ 'error', 'always-multiline' ], // prettier.trailingComma
     'arrow-parens':                       [ 'error', 'always' ], // prettier.arrowParens
-    'react/jsx-closing-bracket-location': [ 1, 'line-aligned' ],
 
     // format
-
     /**
      * OBJECTS
      */
@@ -194,27 +162,5 @@ module.exports = {
       before: true,
       after:  true,
     }],
-    // import
-    'import/no-unresolved': [ 'error', {
-      commonjs: true,
-      amd:      false,
-    }],
-    'sort-imports':         [ 2, {
-      ignoreCase:            false,
-      ignoreDeclarationSort: true,
-      ignoreMemberSort:      true,
-      memberSyntaxSortOrder: [ 'single', 'all', 'multiple', 'none' ],
-    }],
-    'import/order': [ 2, {
-      'newlines-between': 'always',
-      groups:             [ 'builtin', 'external', 'internal', 'parent', 'sibling', 'index' ],
-    }],
-    /**
-     * NODE
-     */
-    'node/no-unpublished-require':            0,
-    // depracated!
-    // see https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md
-    'node/no-unsupported-features/es-syntax': 0,
   },
 };

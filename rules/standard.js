@@ -1,0 +1,28 @@
+module.exports = {
+  // overwrites of eslint-config-standard
+  rules: {
+    camelcase: [ 'error', {
+      ignoreDestructuring: true,
+      properties:          'never', // ignores properites case
+    }],
+    'block-spacing': [ 'error', 'always' ],
+    yoda:            [ 'error', 'never' ],
+
+    'no-undefined':   'error', // use "null" instead of undefined
+    'no-undef':       [ 'error' ],
+    'no-unused-vars': [ 'warn', {
+      vars:                'local',
+      caughtErrors:        'none',
+      args:                'none',
+      ignoreRestSiblings:  true,
+      varsIgnorePattern:  'React',
+    }],
+
+    'no-unused-expressions': [ 'error', {
+      allowShortCircuit: true,
+      allowTernary:      true,
+    }],
+
+    'standard/no-callback-literal': 0,
+  },
+};
