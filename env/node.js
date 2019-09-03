@@ -91,9 +91,14 @@ module.exports = {
         consistent:    true,
         minProperties: 2,
       },
-      ImportDeclaration: 'never',
+      ImportDeclaration: {
+        multiline:     true,
+        consistent:    true,
+        minProperties: 2,
+      },
       ExportDeclaration: {
         multiline:     true,
+        consistent:    true,
         minProperties: 2,
       },
     }],
