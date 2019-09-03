@@ -1,6 +1,3 @@
-// TODO: babel-register only for react/webpack
-require('../utils/babelRegister');
-
 const CONSTANTS = require('../utils/constants');
 
 module.exports = {
