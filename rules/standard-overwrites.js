@@ -21,7 +21,14 @@ module.exports = {
       allowShortCircuit: true,
       allowTernary:      true,
     }],
-
+    'no-mixed-operators':       [ 'error', {
+      groups: [
+        [ '==', '!=', '===', '!==', '>', '>=', '<', '<=' ],
+        // [ '&&', '||' ],
+        [ 'in', 'instanceof' ],
+      ],
+      allowSamePrecedence: true,
+    }],
     // 'standard/no-callback-literal': 0,
   },
 };
