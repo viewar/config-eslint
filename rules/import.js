@@ -23,7 +23,7 @@ module.exports = {
     }],
     'import/order': [ 2, {
       'newlines-between': 'always',
-      groups:             [ 'builtin', 'external', 'internal', 'parent', 'sibling', 'index' ],
+      groups:             [[ 'builtin', 'external' ], 'internal', [ 'parent', 'sibling' ], 'index' ],
     }],
     'sort-imports':         [ 2, {
       ignoreCase:            false,
