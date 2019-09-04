@@ -2,7 +2,10 @@
 
 ## Usage
 
-### installation (modules)
+### installation (npm modules)
+
+**config**
+`npm i -D https://bitbucket.org/viewar_sf/eslint-config-viewar`
 
 **basic libaries**  
 `npm i -D prettier eslint eslint-formatter-pretty eslint-plugin-promise`
