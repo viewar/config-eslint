@@ -11,7 +11,7 @@
 `npm i -D prettier eslint eslint-formatter-pretty eslint-plugin-promise`
 
 **env/node**  
-`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import`
+`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-import-resolver-webpack`
 
 **env/react**  
 `npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-plugin-react`
