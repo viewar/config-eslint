@@ -2,9 +2,9 @@
 
 ## Usage
 
-### installation (npm modules)
+### installation (modules)
 
-**config**
+**config**  
 `npm i -D https://bitbucket.org/viewar_sf/eslint-config-viewar`
 
 **basic libaries**  
@@ -16,11 +16,34 @@
 **env/react**  
 `npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-plugin-react`
 
-### configuration
+### configuration (rc files)
+
+**eslint**
 
 ```javascript
-// .eslintrc
+// ROOT/.eslintrc
 { "extends": ["viewar/env/react"] } // thats all!
+```
+
+**prettier**
+
+> as this package is still in early stage,  
+> you'll need to add your prettierrc config manually
+
+```javascript
+// ROOT/.prettierrc
+{
+  "printWidth": 90,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "arrowParens": "always",
+  "semi": true,
+  "bracketSpacing": true,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed"
+}
 ```
 
 ### integration (VsCode)
@@ -33,7 +56,7 @@
 #### configure vscode
 
 ```javascript
-// .vscode/settings.json
+// ROOT/.vscode/settings.json
 // (workspace or global)
 {
   "javascript.validate.enable": false,
@@ -66,8 +89,6 @@
 
 - provide export of .prettier
   use `process.cwd()` for correct require-path!?
-
-<!--- eslint-import-resolver-webpack --->
 
 ## Roadmap
 
