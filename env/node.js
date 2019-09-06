@@ -3,6 +3,7 @@ const CONSTANTS = require('../utils/constants');
 module.exports = {
   env: {
     node:    true,
+    mocha:   true,
     es6:     false,
     browser: false,
   },

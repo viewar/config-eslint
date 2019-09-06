@@ -1,4 +1,8 @@
-# Formating and Linting
+# eslint-config-viewar
+
+[![CircleCI status][circle-ci-status-img]](https://circleci.com/bb/viewar_sf/eslint-config-viewar/tree/master)
+
+[circle-ci-status-img]: https://circleci.com/bb/viewar_sf/eslint-config-viewar.svg?style=svg
 
 ## Usage
 
