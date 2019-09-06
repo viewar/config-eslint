@@ -1,7 +1,5 @@
 const CONSTANTS = {
-  extensions: {
-    modules: [ '.js', '.jsx' ],
-  },
+  extensions: [ '.js', '.jsx', '.json' ],
 };
 
 module.exports = CONSTANTS;

@@ -6,7 +6,6 @@ module.exports = {
     es6:     false,
     browser: false,
   },
-  // parser:        'babel-eslint',
   parser:        'babel-eslint',
   parserOptions: {
     ecmaVersion:  2019,
@@ -20,13 +19,13 @@ module.exports = {
   settings: {
     // 'engines' config is taken from package.js
     // engines: { node: '>=10.0.0' },
-    node:    {
-      tryExtensions: [ ...CONSTANTS.extensions.modules ],
+    node: {
+      tryExtensions: [ ...CONSTANTS.extensions ],
     },
     'import/resolver': {
       node: {
         paths:      [ '.' ],
-        extensions: [ '.js' ],
+        extensions: [ ...CONSTANTS.extensions ],
       },
     },
     // 'import/cache': { lifetime: 5 },
@@ -51,117 +50,160 @@ module.exports = {
      * otherwise you'll see eslint re-formating prettier changes
      */
     // printWidth
-    'max-len':  [ 'warn', 120, { ignoreComments: true }],
-    indent:    [ 'error', 2, {
-      VariableDeclarator: {
-        'var':   2,
-        let:     2,
-        'const': 1,
+    'max-len': [ 'warn', 120, { ignoreComments: true }],
+    indent:    [
+      'error',
+      2,
+      {
+        VariableDeclarator: {
+          'var':   2,
+          let:     2,
+          'const': 1,
+        },
+        ignoreComments: false,
       },
-      ignoreComments: false,
-    }],
-    semi:                                 [ 'error', 'always' ], // prettier.semi
-    quotes:                               [ 'error', 'single' ], // prettier.singleQuote
-    'comma-spacing':                      [ 'error', {
-      before: false,
-      after:  true,
-    }],
-    'comma-dangle':                       [ 'error', 'always-multiline' ], // prettier.trailingComma
-    'arrow-parens':                       [ 'error', 'always' ], // prettier.arrowParens
+    ],
+    semi:            [ 'error', 'always' ], // prettier.semi
+    quotes:          [ 'error', 'single' ], // prettier.singleQuote
+    'comma-spacing': [
+      'error',
+      {
+        before: false,
+        after:  true,
+      },
+    ],
+    'comma-dangle': [ 'error', 'always-multiline' ], // prettier.trailingComma
+    'arrow-parens': [ 'error', 'always' ], // prettier.arrowParens
 
     // format
     /**
      * OBJECTS
      */
-    'quote-props':          [ 'error', 'as-needed', {
-      keywords:    true,
-      unnecessary: true,
-    }],
-    'object-curly-newline':    [ 'error', {
-      ObjectExpression:  {
-        multiline:     true,
-        consistent:    true,
-        minProperties: 2,
+    'quote-props': [
+      'error',
+      'as-needed',
+      {
+        keywords:    true,
+        unnecessary: true,
       },
-      ObjectPattern:     {
-        multiline:     true,
-        consistent:    true,
-        minProperties: 4,
+    ],
+    'object-curly-newline': [
+      'error',
+      {
+        ObjectExpression: {
+          multiline:     true,
+          consistent:    true,
+          minProperties: 2,
+        },
+        ObjectPattern: {
+          multiline:     true,
+          consistent:    true,
+          minProperties: 4,
+        },
+        ImportDeclaration: {
+          multiline:     true,
+          consistent:    true,
+          minProperties: 4,
+        },
+        ExportDeclaration: {
+          multiline:     true,
+          consistent:    true,
+          minProperties: 2,
+        },
       },
-      ImportDeclaration: {
-        multiline:     true,
-        consistent:    true,
-        minProperties: 4,
+    ],
+    'object-property-newline': [
+      'error',
+      {
+        allowMultiplePropertiesPerLine: false,
       },
-      ExportDeclaration: {
-        multiline:     true,
-        consistent:    true,
-        minProperties: 2,
+    ],
+    'object-curly-spacing': [
+      'error',
+      'always',
+      {
+        objectsInObjects: false,
+        arraysInObjects:  false,
       },
-    }],
-    'object-property-newline': [ 'error', {
-      allowMultiplePropertiesPerLine: false,
-    }],
-    'object-curly-spacing':    [ 'error', 'always', {
-      objectsInObjects: false,
-      arraysInObjects:  false,
-    }],
+    ],
     /**
      * ARRAYS
      */
     'array-element-newline': [ 'error', 'consistent' ],
-    'array-bracket-newline':   [ 'error', 'consistent' ],
-    'array-bracket-spacing': [ 'error', 'always', {
-      singleValue:     true,
-      objectsInArrays: false,
-      arraysInArrays:  false,
-    }],
+    'array-bracket-newline': [ 'error', 'consistent' ],
+    'array-bracket-spacing': [
+      'error',
+      'always',
+      {
+        singleValue:     true,
+        objectsInArrays: false,
+        arraysInArrays:  false,
+      },
+    ],
     /**
      * FUNCTIONS
      */
     'brace-style':                 [ 'error', 'stroustrup', { allowSingleLine: true }],
-    'space-before-function-paren': [ 'error', {
-      anonymous:  'never',
-      named:      'never',
-      asyncArrow: 'always',
-    }],
-    'no-multiple-empty-lines': [ 'error', {
-      max:    2,
-      maxEOF: 1,
-    }],
-    'no-multi-spaces': [ 'error', {
-      exceptions: {
-        VariableDeclarator:   true,
-        ImportDeclaration:    true,
-        AssignmentExpression: true,
-        ClassProperty:        true,
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous:  'never',
+        named:      'never',
+        asyncArrow: 'always',
       },
-    }],
-    'one-var': [ 'error', {
-      'const':            'never',
-      'var':              'consecutive',
-      let:              'consecutive',
-      separateRequires: true,
-    }],
-    'key-spacing': [ 'error', {
-      singleLine: {
-        beforeColon: false,
-        afterColon:  true,
+    ],
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max:    2,
+        maxEOF: 1,
       },
-      multiLine:  {
-        beforeColon: false,
-        afterColon:  true,
+    ],
+    'no-multi-spaces': [
+      'error',
+      {
+        exceptions: {
+          VariableDeclarator:   true,
+          ImportDeclaration:    true,
+          AssignmentExpression: true,
+          ClassProperty:        true,
+        },
       },
-      align: {
-        beforeColon: false,
-        afterColon:  true,
-        mode:        'minimum',
-        on:          'value',
+    ],
+    'one-var': [
+      'error',
+      {
+        'const':            'never',
+        'var':              'consecutive',
+        let:              'consecutive',
+        separateRequires: true,
       },
-    }],
-    'keyword-spacing': [ 'error', {
-      before: true,
-      after:  true,
-    }],
+    ],
+    'key-spacing': [
+      'error',
+      {
+        singleLine: {
+          beforeColon: false,
+          afterColon:  true,
+        },
+        multiLine: {
+          beforeColon: false,
+          afterColon:  true,
+        },
+        align: {
+          beforeColon: false,
+          afterColon:  true,
+          mode:        'minimum',
+          on:          'value',
+        },
+      },
+    ],
+    'keyword-spacing': [
+      'error',
+      {
+        before: true,
+        after:  true,
+      },
+    ],
   },
 };
