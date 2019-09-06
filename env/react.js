@@ -1,5 +1,7 @@
+// babelRegister needed for import resolver
 require('../utils/babelRegister');
 
+const CONSTANTS         = require('../utils/constants');
 const getResolveConfigPath  = require('../utils/getResolveConfigPath');
 
 module.exports = {
@@ -19,25 +21,20 @@ module.exports = {
     },
   },
 
-
   settings: {
     engines: { node: '>=12.0.0' },
     node:    {
-      tryExtensions: [ ...CONSTANTS.extensions.modules ],
+      tryExtensions: [ ...CONSTANTS.extensions ],
     },
-    react:   {
+    react: {
       createClass: 'createReactClass',
       version:     '16.0.9',
       flowVersion: '0.53',
     },
     'import/resolver': {
       node: {
-        paths:      [ './config' ],
-        extensions: [ '.js' ],
-      },
-      webpack: {
         paths:      [ './src' ],
-        extensions: [ ...CONSTANTS.extensions.modules ],
+        extensions: [ ...CONSTANTS.extensions.filter((v) => v !== '*') ],
       },
       webpack: (() => {
         const resolveConfigPath = getResolveConfigPath();
@@ -53,7 +50,6 @@ module.exports = {
   },
   // 'import/cache': { lifetime: 5 },
   plugins:   [ 'react' ],
-
   'extends': [
     require.resolve('../env/node'),
     // RULES
@@ -61,4 +57,3 @@ module.exports = {
     require.resolve('../rules/react'),
   ],
 };
-
