@@ -15,10 +15,10 @@
 `npm i -D prettier eslint eslint-formatter-pretty eslint-plugin-promise`
 
 **env/node**  
-`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-import-resolver-webpack`
+`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-import-resolver-node`
 
 **env/react**  
-`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-plugin-react`
+`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-plugin-react eslint-import-resolver-webpack`
 
 ### configuration (rc files)
 
@@ -94,39 +94,39 @@
 - provide export of .prettier
   use `process.cwd()` for correct require-path!?
 
-## Roadmap
+## import resolvers
 
-**next**
+### node
 
-- remove eslint-plugin-standard  
-  the plugin is used for one rule only: 'standard/no-callback-literal',  
-  once, this rule [will get removed](https://github.com/standard/standard/issues/1352) (blocked by [eslint-plugin-node#179](https://github.com/standard/standard/issues/1352)),  
-  we can finally get rid of `eslint-plugin-standard` and just use `eslint-config-standard`
+```javascript
+{
+  paths:      [ './src' ],
+  extensions: [ '.js', '.jsx', '.json' ],
+}
+```
+
+### webpack
+
+as default we use just add the extensions:
+`{ extensions: ['.js', '.jsx', '.json'] }`
+
+if you are using [special resolve options](https://bitbucket.org/viewar_sf/viewar-webpack/src/master/src/webpack.config.resolve.js) like additional module directories,  
+you can add an `webpack.config.resolve.js` to your workspace root.
+
+the subpath to your resolver config can be set per env var `CONFIG_PATH`
 
 ## TODO
 
-- use env-based exports (/browser, /node, /react)
-- move `.eslintrc` to /config ?
-  - add path to vscode settings
-- use .vscode/settings from this packages
-- use .prettierrc from this package
-- `npm run format`
+- export .vscode/settings
+- export .prettierrc
 - stage-lint
 - add eslint-plugin-jsdoc
-- test/enhance import resolver (with eslint-resolver-webpack)
-  - try to use 'eslint-import-resolver-babel-module' (without webpack resolver)
-- TEST on other workstations (especially on MAC)
-- shove eslint/prettier RC files into /config
+- move eslint/prettier RC files into /config
+  - add path to vscode settings
 - add eslint-plugin-jsx
-- optional
-  - add '[eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)'
-- clearify usage of "extend->require.resolve" vs "...require()"
 
 ## ISSUES
 
 - `node/no-unpublished-require`  
   `plugin:node/recommended` demands to have used modules in dependencies (!devDependencies)
-  => turn off rule? => shove into node-specific setup
-- named imports not checked on require-syntax
-- import/order - instant imports are ignored,  
-  which does mess up the import order (no empty line between groups)
+  atm, the rule is turned of
