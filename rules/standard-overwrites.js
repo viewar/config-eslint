@@ -14,7 +14,7 @@ module.exports = {
       caughtErrors:        'none',
       args:                'none',
       ignoreRestSiblings:  true,
-      varsIgnorePattern:  'React',
+      varsIgnorePattern:  'React|styles|cx',
     }],
 
     'no-unused-expressions': [ 'error', {
