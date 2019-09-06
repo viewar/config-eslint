@@ -1,6 +1,6 @@
 require('../utils/babelRegister');
 
-const CONSTANTS = require('../utils/constants');
+const getResolveConfigPath  = require('../utils/getResolveConfigPath');
 
 module.exports = {
   env: {
@@ -39,6 +39,16 @@ module.exports = {
         paths:      [ './src' ],
         extensions: [ ...CONSTANTS.extensions.modules ],
       },
+      webpack: (() => {
+        const resolveConfigPath = getResolveConfigPath();
+
+        return resolveConfigPath ? {
+          config: resolveConfigPath,
+          env:    'test',
+        } : {
+          extensions: [ ...CONSTANTS.extensions.concat([ '*' ]) ],
+        };
+      })(),
     },
   },
   // 'import/cache': { lifetime: 5 },
