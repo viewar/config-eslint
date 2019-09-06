@@ -1,16 +1,16 @@
 module.exports = {
   // parser:        'babel-eslint',
   parserOptions: {
-    sourceType:   'script',
-    ecmaVersion:  6,
+    sourceType: 'script',
+    ecmaVersion: 6,
     ecmaFeatures: {
-      jsx:     false,
-      classes: false,
-    },
+      jsx: false,
+      classes: false
+    }
   },
   env: {
-    es6:  false,
-    node: false,
+    es6: false,
+    node: false
   },
 
   plugins: [ 'promise' ],
@@ -20,16 +20,17 @@ module.exports = {
     'plugin:promise/recommended',
     // RULES
     ...[
+      '../rules/base.js',
       '../rules/standard.js',
       '../rules/standard-overwrites.js',
-      '../rules/promise.js',
-    ].map(require.resolve),
+      '../rules/promise.js'
+    ].map(require.resolve)
   ],
 
   globals: {
-    document:  false,
+    document: false,
     navigator: false,
-    window:    false,
-    console:   false,
-  },
-};
+    window: false,
+    console: false
+  }
+}

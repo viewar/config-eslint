@@ -117,6 +117,7 @@ the subpath to your resolver config can be set per env var `CONFIG_PATH`
 
 ## TODO
 
+- do not extend envs
 - export .vscode/settings
 - export .prettierrc
 - stage-lint
