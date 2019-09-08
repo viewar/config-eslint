@@ -8,8 +8,15 @@ const path = require('path');
 const getResolveConfigPath = (pathToConfigs) => {
   let resolvedPath;
   try {
+    resolvedPath = path.resolve(
+      process.cwd(),
+      pathToConfigs || process.env.CONFIG_PATH || '',
+      './webpack.config.resolve.js'
+    );
     // get path
-    resolvedPath = path.resolve(process.cwd(), pathToConfigs || process.env.CONFIG_PATH, './webpack.config.resolve.js');
+    if (process.env.DEBUG) {
+      console.log('[@viewar/webpack] Info: loading resolve config:', resolvedPath);
+    }
     // verify if file is loadable
     require(resolvedPath);
   }
