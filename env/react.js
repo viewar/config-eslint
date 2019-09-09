@@ -29,10 +29,6 @@ module.exports = {
       flowVersion: '0.53',
     },
     'import/resolver': {
-      node: {
-        paths:      [ './src' ],
-        extensions: [ ...CONSTANTS.extensions.filter((v) => v !== '*') ],
-      },
       webpack: (() => {
         const resolveConfigPath = getResolveConfigPath();
 
