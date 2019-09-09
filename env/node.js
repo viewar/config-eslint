@@ -38,7 +38,7 @@ module.exports = {
     'plugin:node/recommended',
     'plugin:import/warnings',
     'plugin:import/errors',
-    // RULES
+    require.resolve('../rules/base.js'),
     require.resolve('../rules/import.js'),
     require.resolve('../rules/node.js')
   ],
