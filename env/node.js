@@ -22,7 +22,7 @@ module.exports = {
     // engines: { node: '>=10.0.0' },
     node: {
       paths:           [ '.' ],
-      moduleDirectory: [ CONSTANTS.paths.src, 'node_modules' ],
+      resolvePaths:    [ CONSTANTS.paths.src, 'node_modules' ],
       extensions:      [ ...CONSTANTS.extensions ],
     },
     'import/resolver': {
