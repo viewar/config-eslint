@@ -11,14 +11,6 @@
     "editor.formatOnType": false,
     "editor.formatOnSaveTimeout": 500
   },
-<<<<<<< HEAD
-=======
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
-  "editor.formatOnType": false,
-  "editor.formatOnSaveTimeout": 500,
-  "eslint.alwaysShowStatus": true,
->>>>>>> 1e7921dce560d514a989cfadf29bf67c627e07b6
   "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,
   "eslint.run": "onType",

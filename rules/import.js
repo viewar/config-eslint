@@ -11,7 +11,6 @@ module.exports = {
       commonjs:   true,
       amd:      false,
     }],
-    'import/default':                  2,
     'import/no-duplicates':            'error',
     'import/no-named-default':         'error',
     'import/no-webpack-loader-syntax': 'error',
