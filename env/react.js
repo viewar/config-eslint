@@ -23,10 +23,7 @@ module.exports = {
 
   settings: {
     engines: { node: '>=12.0.0' },
-    node:    {
-      tryExtensions: [ ...CONSTANTS.extensions ],
-    },
-    react: {
+    react:   {
       createClass: 'createReactClass',
       version:     '16.0.9',
       flowVersion: '0.53',
