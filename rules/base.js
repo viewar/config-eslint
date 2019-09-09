@@ -14,10 +14,10 @@ module.exports = {
         VariableDeclarator: {
           'var':   2,
           let:     2,
-          'const': 1
+          'const': 1,
         },
-        ignoreComments: false
-      }
+        ignoreComments: false,
+      },
     ],
     semi:            [ 'error', 'always' ], // prettier.semi
     quotes:          [ 'error', 'single' ], // prettier.singleQuote
@@ -25,8 +25,8 @@ module.exports = {
       'error',
       {
         before: false,
-        after:  true
-      }
+        after:  true,
+      },
     ],
     'comma-dangle': [ 'error', 'always-multiline' ], // prettier.trailingComma
     'arrow-parens': [ 'error', 'always' ], // prettier.arrowParens
@@ -40,8 +40,8 @@ module.exports = {
       'as-needed',
       {
         keywords:    true,
-        unnecessary: true
-      }
+        unnecessary: true,
+      },
     ],
     'object-curly-newline': [
       'error',
@@ -49,38 +49,38 @@ module.exports = {
         ObjectExpression: {
           multiline:     true,
           consistent:    true,
-          minProperties: 2
+          minProperties: 2,
         },
         ObjectPattern: {
           multiline:     true,
           consistent:    true,
-          minProperties: 4
+          minProperties: 4,
         },
         ImportDeclaration: {
           multiline:     true,
           consistent:    true,
-          minProperties: 4
+          minProperties: 4,
         },
         ExportDeclaration: {
           multiline:     true,
           consistent:    true,
-          minProperties: 2
-        }
-      }
+          minProperties: 2,
+        },
+      },
     ],
     'object-property-newline': [
       'error',
       {
-        allowMultiplePropertiesPerLine: false
-      }
+        allowMultiplePropertiesPerLine: false,
+      },
     ],
     'object-curly-spacing': [
       'error',
       'always',
       {
         objectsInObjects: false,
-        arraysInObjects:  false
-      }
+        arraysInObjects:  false,
+      },
     ],
     /**
      * ARRAYS
@@ -93,8 +93,8 @@ module.exports = {
       {
         singleValue:     true,
         objectsInArrays: false,
-        arraysInArrays:  false
-      }
+        arraysInArrays:  false,
+      },
     ],
     /**
      * FUNCTIONS
@@ -105,15 +105,15 @@ module.exports = {
       {
         anonymous:  'never',
         named:      'never',
-        asyncArrow: 'always'
-      }
+        asyncArrow: 'always',
+      },
     ],
     'no-multiple-empty-lines': [
       'error',
       {
         max:    2,
-        maxEOF: 1
-      }
+        maxEOF: 1,
+      },
     ],
     'no-multi-spaces': [
       'error',
@@ -122,9 +122,9 @@ module.exports = {
           VariableDeclarator:   true,
           ImportDeclaration:    true,
           AssignmentExpression: true,
-          ClassProperty:        true
-        }
-      }
+          ClassProperty:        true,
+        },
+      },
     ],
     'one-var': [
       'error',
@@ -132,34 +132,34 @@ module.exports = {
         'const':          'never',
         'var':            'consecutive',
         let:              'consecutive',
-        separateRequires: true
-      }
+        separateRequires: true,
+      },
     ],
     'key-spacing': [
       'error',
       {
         singleLine: {
           beforeColon: false,
-          afterColon:  true
+          afterColon:  true,
         },
         multiLine: {
           beforeColon: false,
-          afterColon:  true
+          afterColon:  true,
         },
         align: {
           beforeColon: false,
           afterColon:  true,
           mode:        'minimum',
-          on:          'value'
-        }
-      }
+          on:          'value',
+        },
+      },
     ],
     'keyword-spacing': [
       'error',
       {
         before: true,
-        after:  true
-      }
-    ]
-  }
-}
+        after:  true,
+      },
+    ],
+  },
+};

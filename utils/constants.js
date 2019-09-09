@@ -1,14 +1,14 @@
-const path = require('path')
+const path = require('path');
 
-const ROOT    = path.resolve(process.cwd())
+const ROOT    = path.resolve(process.cwd());
 const paths   = {
   root: ROOT,
-  src: path.resolve(process.env.WEBPACK_PATH || 'src')
-}
+  src:  path.resolve(process.env.WEBPACK_PATH || 'src'),
+};
 
 const CONSTANTS = {
   paths,
-  extensions: [ '.js', '.jsx', '.json' ]
-}
+  extensions: [ '.js', '.jsx', '.json' ],
+};
 
-module.exports = CONSTANTS
+module.exports = CONSTANTS;
