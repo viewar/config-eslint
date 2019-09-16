@@ -60,31 +60,27 @@
 #### configure vscode
 
 ```javascript
-// ROOT/.vscode/settings.json
-// (workspace or global)
 {
+  "javascript.implicitProjectConfig.checkJs": true,
   "javascript.validate.enable": false,
   "javascript.format.enable": false,
   "editor.defaultFormatter": "teeLang.vsprettier",
   "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.formatOnSaveTimeout": 500
   },
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "editor.formatOnSaveTimeout": 500,
-  "eslint.alwaysShowStatus": true,
   "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
   "eslint.run": "onType",
-  "vsprettier.packageManager": "npm",
-  "vsprettier.useEsLint": true,
-  "vsprettier.useStyleLint": true,
-  "vsprettier.requireConfig": true,
   "eslint.lintTask.enable": true,
-  "eslint.workingDirectories": [
-    { "directory": ".", "changeProcessCWD": false },
-    { "directory": "src", "changeProcessCWD": true }
-  ]
+  "eslint.workingDirectories": [{ "directory": ".", "changeProcessCWD": true }],
+  "vsprettier.packageManager": "npm",
+  "vsprettier.useEsLint": false,
+  "vsprettier.useStyleLint": true,
+  "vsprettier.requireConfig": true
 }
 
 ```
@@ -117,14 +113,14 @@ the subpath to your resolver config can be set per env var `CONFIG_PATH`
 
 ## TODO
 
+- remove prettier-eslint
 - do not extend envs
-- export .vscode/settings
+- export ? .vscode/settings
 - export .prettierrc
 - stage-lint
 - add eslint-plugin-jsdoc
 - move eslint/prettier RC files into /config
   - add path to vscode settings
-- add eslint-plugin-jsx
 
 ## ISSUES
 

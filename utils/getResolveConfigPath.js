@@ -20,7 +20,7 @@ const getResolveConfigPath = (pathToConfigs) => {
     // verify if file is loadable
     require(resolvedPath);
   }
- catch (e) {
+  catch (e) {
     if (e.code === 'MODULE_NOT_FOUND') {
       if (process.env.DEBUG) {
         console.log(
@@ -28,7 +28,7 @@ const getResolveConfigPath = (pathToConfigs) => {
         );
       }
     }
- else {
+    else {
       throw e;
     }
 
