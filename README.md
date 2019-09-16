@@ -11,15 +11,6 @@
 **config**  
 `npm i -D https://bitbucket.org/viewar_sf/eslint-config-viewar`
 
-**basic libaries**  
-`npm i -D prettier eslint eslint-formatter-pretty eslint-plugin-promise`
-
-**env/node**  
-`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-import-resolver-node`
-
-**env/react**  
-`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-plugin-react eslint-import-resolver-webpack`
-
 ### configuration (rc files)
 
 **eslint**
@@ -32,7 +23,7 @@
 **prettier**
 
 > as this package is still in early stage,  
-> you'll need to add your prettierrc config manually
+> you'll need to add our prettierrc config manually
 
 ```javascript
 // ROOT/.prettierrc
@@ -58,6 +49,8 @@
 - "dbaeumer.vscode-eslint"
 
 #### configure vscode
+
+just add `/.vscode/settings.json` to your workspace root:
 
 ```javascript
 {
