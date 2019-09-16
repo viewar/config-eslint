@@ -26,7 +26,7 @@
 > you'll need to add our prettierrc config manually
 
 ```javascript
-// ROOT/.prettierrc
+// {workspace}/.prettierrc
 {
   "printWidth": 90,
   "tabWidth": 2,
@@ -37,8 +37,17 @@
   "semi": true,
   "bracketSpacing": true,
   "proseWrap": "preserve",
-  "quoteProps": "as-needed"
+  "quoteProps": "as-needed",
+  "overrides": [
+    {
+      "files": "*.{js,jsx}",
+      "options": {
+        "parser": "babel"
+      }
+    }
+  ]
 }
+
 ```
 
 ### integration (VsCode)
@@ -50,9 +59,8 @@
 
 #### configure vscode
 
-just add `/.vscode/settings.json` to your workspace root:
-
 ```javascript
+// {workspace}/.vscode/settings.json
 {
   "javascript.implicitProjectConfig.checkJs": true,
   "javascript.validate.enable": false,
