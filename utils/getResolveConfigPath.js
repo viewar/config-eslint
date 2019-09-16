@@ -20,13 +20,19 @@ const getResolveConfigPath = (pathToConfigs) => {
     // verify if file is loadable
     require(resolvedPath);
   }
-  catch (e) {
+ catch (e) {
     if (e.code === 'MODULE_NOT_FOUND') {
       if (process.env.DEBUG) {
-        console.log('[@viewar/webpack] Info: webpack.config.resolve.js not found - using default resolver config');
+        console.log(
+          '[@viewar/webpack] Info: webpack.config.resolve.js not found - using default resolver config'
+        );
       }
     }
-    else { throw e; }
+ else {
+      throw e;
+    }
+
+    return false;
   }
   return resolvedPath;
 };
