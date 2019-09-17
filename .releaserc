@@ -54,5 +54,6 @@
         "message": "chore(release): 🔖 ${nextRelease.version} 🚀 published\n\n${nextRelease.notes}"
       }
     ],
+    "@semantic-release/github"
   ]
 }
