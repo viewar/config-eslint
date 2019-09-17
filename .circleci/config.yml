@@ -33,4 +33,4 @@ workflows:
             - test
           filters:
             branches:
-              only: feature/semanticRelease
+              only: develop

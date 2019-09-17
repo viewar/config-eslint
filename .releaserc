@@ -1,5 +1,5 @@
 {
-  "branch": "feature/semanticRelease",
+  "branch": "develop",
   "plugins": [
    [
     "@semantic-release/commit-analyzer",
