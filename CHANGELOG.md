@@ -6,6 +6,19 @@
 
 ### Bug Fixes
 
+* import resolvers and vsCode settings ([4092ce6](https://github.com/doubleu23/eslint-config-viewar/commit/4092ce6)), closes [#7](https://github.com/doubleu23/eslint-config-viewar/issues/7)
+* **semantic-release:** reset version to release from master ([139182e](https://github.com/doubleu23/eslint-config-viewar/commit/139182e))
+
+
+### Features
+
+* **semantic-release:** release to GH and push to BB ([02b5f05](https://github.com/doubleu23/eslint-config-viewar/commit/02b5f05))
+
+# [1.2.0](https://github.com/doubleu23/eslint-config-viewar/compare/v1.1.0...v1.2.0) (2019-09-18)
+
+
+### Bug Fixes
+
 * **CI:** readd test job (+ trigger CI) ([45c2c4b](https://github.com/doubleu23/eslint-config-viewar/commit/45c2c4b))
 * **release:** version number after reset ([fdedf32](https://github.com/doubleu23/eslint-config-viewar/commit/fdedf32))
 
