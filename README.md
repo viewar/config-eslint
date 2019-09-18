@@ -11,15 +11,6 @@
 **config**  
 `npm i -D https://bitbucket.org/viewar_sf/eslint-config-viewar`
 
-**basic libaries**  
-`npm i -D prettier eslint eslint-formatter-pretty eslint-plugin-promise`
-
-**env/node**  
-`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-import-resolver-node`
-
-**env/react**  
-`npm i -D babel-eslint eslint-plugin-node eslint-plugin-import eslint-plugin-react eslint-import-resolver-webpack`
-
 ### configuration (rc files)
 
 **eslint**
@@ -32,10 +23,10 @@
 **prettier**
 
 > as this package is still in early stage,  
-> you'll need to add your prettierrc config manually
+> you'll need to add our prettierrc config manually
 
 ```javascript
-// ROOT/.prettierrc
+// {workspace}/.prettierrc
 {
   "printWidth": 90,
   "tabWidth": 2,
@@ -46,8 +37,17 @@
   "semi": true,
   "bracketSpacing": true,
   "proseWrap": "preserve",
-  "quoteProps": "as-needed"
+  "quoteProps": "as-needed",
+  "overrides": [
+    {
+      "files": "*.{js,jsx}",
+      "options": {
+        "parser": "babel"
+      }
+    }
+  ]
 }
+
 ```
 
 ### integration (VsCode)
@@ -60,31 +60,28 @@
 #### configure vscode
 
 ```javascript
-// ROOT/.vscode/settings.json
-// (workspace or global)
+// {workspace}/.vscode/settings.json
 {
+  "javascript.implicitProjectConfig.checkJs": true,
   "javascript.validate.enable": false,
   "javascript.format.enable": false,
   "editor.defaultFormatter": "teeLang.vsprettier",
   "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.formatOnSaveTimeout": 500
   },
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "editor.formatOnSaveTimeout": 500,
-  "eslint.alwaysShowStatus": true,
   "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
   "eslint.run": "onType",
-  "vsprettier.packageManager": "npm",
-  "vsprettier.useEsLint": true,
-  "vsprettier.useStyleLint": true,
-  "vsprettier.requireConfig": true,
   "eslint.lintTask.enable": true,
-  "eslint.workingDirectories": [
-    { "directory": ".", "changeProcessCWD": false },
-    { "directory": "src", "changeProcessCWD": true }
-  ]
+  "eslint.workingDirectories": [{ "directory": ".", "changeProcessCWD": true }],
+  "vsprettier.packageManager": "npm",
+  "vsprettier.useEsLint": false,
+  "vsprettier.useStyleLint": true,
+  "vsprettier.requireConfig": true
 }
 
 ```
@@ -117,14 +114,14 @@ the subpath to your resolver config can be set per env var `CONFIG_PATH`
 
 ## TODO
 
+- remove prettier-eslint
 - do not extend envs
-- export .vscode/settings
+- export ? .vscode/settings
 - export .prettierrc
 - stage-lint
 - add eslint-plugin-jsdoc
 - move eslint/prettier RC files into /config
   - add path to vscode settings
-- add eslint-plugin-jsx
 
 ## ISSUES
 
