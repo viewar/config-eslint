@@ -1,3 +1,13 @@
+# Changelog
+> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
+
+## [1.2.2](https://bitbucket.org/viewar_sf/eslint-config-viewar/compare/v1.2.1...v1.2.2) (2019-09-18)
+
+
+### Bug Fixes
+
+* **circleCI:** push to own "next" branch via GIT_CREDENTIALS ([67f1878](https://bitbucket.org/viewar_sf/eslint-config-viewar/commits/67f1878))
+
 ## [1.2.1](https://github.com/DoubleU23/eslint-config-viewar/compare/v1.2.0...v1.2.1) (2019-09-18)
 
 ### Bug Fixes
