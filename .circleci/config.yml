@@ -37,10 +37,10 @@ workflows:
   version: 2
   lint_and_release:
     jobs:
-      # - test
+      - test
       - semantic_release:
-          # requires:
-          #   - test
+          requires:
+            - test
           filters:
             branches:
               only: next
