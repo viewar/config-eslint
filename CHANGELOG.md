@@ -1,6 +1,13 @@
 # Changelog
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
+## [1.2.4](https://bitbucket.org/viewar_sf/eslint-config-viewar/compare/v1.2.3...v1.2.4) (2019-09-18)
+
+
+### Bug Fixes
+
+* try to pull release commit ([8a26fb5](https://bitbucket.org/viewar_sf/eslint-config-viewar/commits/8a26fb5))
+
 ## [1.2.3](https://bitbucket.org/viewar_sf/eslint-config-viewar/compare/v1.2.2...v1.2.3) (2019-09-18)
 
 
