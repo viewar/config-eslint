@@ -42,7 +42,7 @@ workflows:
       #     filters:
       #       branches:
       #         only: next
-      - release_on_github:
+      - push_to_github:
           requires:
             - test
           filters:
