@@ -22,19 +22,20 @@ jobs:
       - run:
           name: run 'semantic-release'
           command: npx semantic-release
+      - run:
+          name: run 'semantic-release'
+          command: npx semantic-release
   push_to_github:
     docker:
       - image: circleci/node:12.9.0
     steps:
       - checkout
       - run:
+          name: pull release commit
+          command: git pull
+      - run:
           name: Push to Github
           command: git push https://doubleu23:${GH_TOKEN}@github.com/doubleu23/eslint-config-viewar
-  release_to_github:
-    docker:
-      - image: circleci/node:12.9.0
-    steps:
-      - checkout
       - run:
           name: Release to Github
           command: npx semantic-release --repositoryUrl https://github.com/doubleu23/eslint-config-viewar.git --plugins @semantic-release/github --debug
@@ -53,12 +54,6 @@ workflows:
       - push_to_github:
           requires:
             - semantic_release
-          filters:
-            branches:
-              only: next
-      - release_to_github:
-          requires:
-            - push_to_github
           filters:
             branches:
               only: next
