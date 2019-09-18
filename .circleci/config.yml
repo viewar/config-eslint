@@ -22,15 +22,29 @@ jobs:
       - run:
           name: run 'semantic-release'
           command: npx semantic-release
+  # release_on_github:
+  #   docker:
+  #     - image: circleci/node:12.9.0
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: Push to Github
+  #         command: semantic-release
 
 workflows:
   version: 2
   lint_and_release:
     jobs:
-      - test
+      # - test
       - semantic_release:
-          requires:
-            - test
+          # requires:
+          #   - test
           filters:
             branches:
               only: next
+      # - release_on_github:
+      #     requires:
+      #       - test
+      #     filters:
+      #       branches:
+      #         only: master

@@ -1,5 +1,6 @@
 {
   "branch": "next",
+  "repositoryUrl": "https://bitbucket.org/viewar_sf/eslint-config-viewar.git",
   "plugins": [
    [
     "@semantic-release/commit-analyzer",
@@ -53,7 +54,6 @@
         ],
         "message": "chore(release): 🔖 ${nextRelease.version} 🚀 published\n\n${nextRelease.notes}"
       }
-    ],
-    "@semantic-release/github"
+    ]
   ]
 }
