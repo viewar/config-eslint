@@ -1,30 +1,13 @@
-# Changelog
-> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
-
 # [1.2.0](https://github.com/doubleu23/eslint-config-viewar/compare/v1.1.0...v1.2.0) (2019-09-18)
-
 
 ### Bug Fixes
 
-* **CI:** readd test job (+ trigger CI) ([45c2c4b](https://github.com/doubleu23/eslint-config-viewar/commit/45c2c4b))
-* **release:** version number after reset ([fdedf32](https://github.com/doubleu23/eslint-config-viewar/commit/fdedf32))
-
-
-### Features
-
-* **semantic-release:** runs per CI on branch "next" ([#2](https://github.com/doubleu23/eslint-config-viewar/issues/2)) ([6e6bb17](https://github.com/doubleu23/eslint-config-viewar/commit/6e6bb17))
-
-# [1.2.0](https://github.com/doubleu23/eslint-config-viewar/compare/v1.1.0...v1.2.0) (2019-09-18)
-
-
-### Bug Fixes
-
-* **release:** version number after reset ([fdedf32](https://github.com/doubleu23/eslint-config-viewar/commit/fdedf32))
-
+- **CI:** readd test job (+ trigger CI) ([45c2c4b](https://github.com/doubleu23/eslint-config-viewar/commit/45c2c4b))
+- **release:** version number after reset ([fdedf32](https://github.com/doubleu23/eslint-config-viewar/commit/fdedf32))
 
 ### Features
 
-* **semantic-release:** runs per CI on branch "next" ([#2](https://github.com/doubleu23/eslint-config-viewar/issues/2)) ([6e6bb17](https://github.com/doubleu23/eslint-config-viewar/commit/6e6bb17))
+- **semantic-release:** runs per CI on branch "next" ([#2](https://github.com/doubleu23/eslint-config-viewar/issues/2)) ([6e6bb17](https://github.com/doubleu23/eslint-config-viewar/commit/6e6bb17))
 
 # 1.1.0 (2019-09-17)
 
