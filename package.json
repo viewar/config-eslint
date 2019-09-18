@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-viewar",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "React boilerplate app for ViewAR SDK",
   "main": "index.js",
   "scripts": {
@@ -32,6 +32,7 @@
   "engines": {
     "node": ">=10.0.0"
   },
+  "repository": "https://github.com/DoubleU23/eslint-config-viewar.git",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.5.5",
@@ -43,14 +44,14 @@
     "@semantic-release/github": "^5.4.3",
     "@semantic-release/npm": "^5.1.15",
     "@semantic-release/release-notes-generator": "^7.3.0",
-    "babel-eslint": "^10.0.2",
-    "babel-loader": "^8.0.4",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
     "chalk": "^2.4.2",
     "css-loader": "^2.1.0",
-    "eslint": "^6.2.0",
+    "eslint": "^6.4.0",
     "eslint-formatter-pretty": "^2.1.1",
     "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-module-utils": "^2.4.1",
@@ -62,7 +63,7 @@
     "glob": "^7.1.4",
     "indent-string": "^4.0.0",
     "mocha": "^6.2.0",
-    "prettier": "^1.15.3",
+    "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.0",
     "prettier-eslint-cli": "^5.0.0",
     "rimraf": "^2.6.3",

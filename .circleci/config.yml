@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   test:
     docker:
@@ -20,17 +20,33 @@ jobs:
           name: Setup
           command: npm install
       - run:
-          name: run 'semantic-release'
+          name: release to GitHub
           command: npx semantic-release
+      - run:
+          name: Push Code to Bitbucket
+          # should fix "remote branch is behind local"
+          command: git push https://viewar_sf:${BB_APP_PW}@bitbucket.org/viewar_sf/eslint-config-viewar.git
+      - run:
+          name: Push tags to Bitbucket
+          command: git push https://viewar_sf:${BB_APP_PW}@bitbucket.org/viewar_sf/eslint-config-viewar.git --tags
+      # - run:
+      #     name: remove GIT_CREDENTIALS
+      #     command: export GIT_CREDENTIALS= >> $BASH_ENV
 
 workflows:
   version: 2
   lint_and_release:
     jobs:
-      - test
+      # - test
       - semantic_release:
-          requires:
-            - test
+          # requires:
+          #   - test
           filters:
             branches:
               only: next
+      # - release_on_github:
+      #     requires:
+      #       - test
+      #     filters:
+      #       branches:
+      #         only: master
