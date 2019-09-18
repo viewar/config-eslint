@@ -37,7 +37,7 @@ jobs:
       - checkout
       - run:
           name: Release to Github
-          command: npx semantic-release --repositoryUrl https://github.com/doubleu23/eslint-config-viewar.git --plugins ["@semantic-release/github"] --debug
+          command: npx semantic-release --repositoryUrl https://github.com/doubleu23/eslint-config-viewar.git --plugins @semantic-release/github --debug
 
 workflows:
   version: 2
