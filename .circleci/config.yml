@@ -29,9 +29,6 @@ jobs:
       - run:
           name: Push tags to Bitbucket
           command: git push https://viewar_sf:${BB_APP_PW}@bitbucket.org/viewar_sf/eslint-config-viewar.git --tags
-      # - run:
-      #     name: remove GIT_CREDENTIALS
-      #     command: export GIT_CREDENTIALS= >> $BASH_ENV
 
 workflows:
   version: 2
@@ -44,9 +41,3 @@ workflows:
           filters:
             branches:
               only: next
-      # - release_on_github:
-      #     requires:
-      #       - test
-      #     filters:
-      #       branches:
-      #         only: master
