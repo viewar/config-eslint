@@ -13,5 +13,7 @@ module.exports = {
     // depracated! breaks `import/export` usage
     // see https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md
     'node/no-unsupported-features/es-syntax': 0,
+    'node/no-extraneous-import':              0,
+    'node/no-extraneous-require':             0,
   },
 };
