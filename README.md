@@ -11,7 +11,7 @@
 ### installation (modules)
 
 **config**  
-`npm i -D https://bitbucket.org/viewar_sf/eslint-config-viewar`
+`npm i -D https://github.com/DoubleU23/eslint-config-viewar`
 
 ### configuration (rc files)
 
