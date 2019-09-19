@@ -1,3 +1,13 @@
+# Changelog
+> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
+
+## [1.2.1](https://github.com/doubleu23/eslint-config-viewar/compare/v1.2.0...v1.2.1) (2019-09-19)
+
+
+### Bug Fixes
+
+* **README:** change install URL to github ([febb43c](https://github.com/doubleu23/eslint-config-viewar/commit/febb43c))
+
 # [1.2.0](https://github.com/doubleu23/eslint-config-viewar/compare/v1.1.0...v1.2.0) (2019-09-18)
 
 ### Bug Fixes
