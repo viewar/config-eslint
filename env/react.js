@@ -1,7 +1,5 @@
 // babelRegister needed for import resolver
 require('../utils/babelRegister');
-
-const CONSTANTS         = require('../utils/constants');
 const getResolveConfigPath  = require('../utils/getResolveConfigPath');
 
 module.exports = {
@@ -20,7 +18,6 @@ module.exports = {
       modules: true,
     },
   },
-
   settings: {
     engines: { node: '>=12.0.0' },
     react:   {
@@ -29,16 +26,12 @@ module.exports = {
       flowVersion: '0.53',
     },
     'import/resolver': {
-      webpack: (() => {
-        const resolveConfigPath = getResolveConfigPath();
-
-        return resolveConfigPath ? {
-          config: resolveConfigPath,
-          env:    'test',
-        } : {
-          extensions: [ ...CONSTANTS.extensions.concat([ '*' ]) ],
-        };
-      })(),
+      webpack: (() => ({
+        // TODO: refactor check webpack config of workspace
+        // and use it if it's no promise!? (also refactor webpack pckg)
+        config: getResolveConfigPath(),
+        env:    'test',
+      }))(),
     },
   },
   // 'import/cache': { lifetime: 5 },

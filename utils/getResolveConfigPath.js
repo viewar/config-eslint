@@ -24,7 +24,7 @@ const getResolveConfigPath = (pathToConfigs) => {
     if (e.code === 'MODULE_NOT_FOUND') {
       if (process.env.DEBUG) {
         console.log(
-          '[@viewar/webpack] Info: webpack.config.resolve.js not found - using default resolver config'
+          '[@viewar/webpack] Info: webpack.config.resolve.js not found - using \'eslint-config-viewar/utils/webpack.config.resolve.js'
         );
       }
     }
@@ -32,7 +32,8 @@ const getResolveConfigPath = (pathToConfigs) => {
       throw e;
     }
 
-    return false;
+    // return default resolve config
+    return path.resolve(__dirname, 'webpack.config.resolve.js');
   }
   return resolvedPath;
 };
