@@ -1,6 +1,13 @@
 # Changelog
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
+## [1.2.2](https://github.com/doubleu23/eslint-config-viewar/compare/v1.2.1...v1.2.2) (2019-09-20)
+
+
+### Bug Fixes
+
+* **resolveConfig:** use fallback resolveConfig ([f549e4e](https://github.com/doubleu23/eslint-config-viewar/commit/f549e4e))
+
 ## [1.2.1](https://github.com/doubleu23/eslint-config-viewar/compare/v1.2.0...v1.2.1) (2019-09-19)
 
 
