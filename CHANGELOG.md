@@ -1,6 +1,13 @@
 # Changelog
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
+# [1.3.0](https://github.com/doubleu23/eslint-config-viewar/compare/v1.2.2...v1.3.0) (2019-09-23)
+
+
+### Features
+
+* **react-rules:** add first draft ([ee2657e](https://github.com/doubleu23/eslint-config-viewar/commit/ee2657e))
+
 ## [1.2.2](https://github.com/doubleu23/eslint-config-viewar/compare/v1.2.1...v1.2.2) (2019-09-20)
 
 
