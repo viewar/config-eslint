@@ -16,19 +16,85 @@
 
 ## Usage
 
-### installation (modules)
+### installation
 
-**config**  
-`npm i -D https://github.com/DoubleU23/eslint-config-viewar`
+`npm i -D eslint`  
+`npm i -D @viewar/config-eslint`
 
-### configuration (rc files)
+### configuration
 
 **eslint**
 
 ```javascript
-// ROOT/.eslintrc
-{ "extends": ["viewar/env/react"] } // thats all!
+// {workspace}/.eslintrc
+{ "extends": ["@viewar/config-eslint/env/react"] }
 ```
+
+### integration (VsCode)
+
+#### install extensions
+
+- "dbaeumer.vscode-eslint"
+- "teeLang.vsprettier" _- optional_
+
+#### configure vscode
+
+```javascript
+// {workspace}/.vscode/settings.json
+{
+  //
+  // PRETTIER - optional
+  // ignored unless you add prettier-config
+  "editor.defaultFormatter": "teeLang.vsprettier",
+  "vsprettier.requireConfig": true,
+  "vsprettier.packageManager": "npm",
+  "vsprettier.useEsLint": false,
+  "vsprettier.useStyleLint": true,
+  // overwrite for react files
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.formatOnSaveTimeout": 500
+  },
+  // ESLINT
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.run": "onType",
+  "eslint.lintTask.enable": true,
+  "eslint.workingDirectories": [{ "directory": ".", "changeProcessCWD": true }],
+  // VS CODE general
+  "javascript.implicitProjectConfig.checkJs": true,
+  // disable built in linter and formatter
+  "javascript.validate.enable": false,
+  "javascript.format.enable": false
+}
+
+```
+
+## import resolvers
+
+### node
+
+```javascript
+{
+  paths:      [ './src' ],
+  extensions: [ '.js', '.jsx', '.json' ],
+}
+```
+
+### webpack
+
+as default we use just add the extensions:
+`{ extensions: ['.js', '.jsx', '.json'] }`
+
+if you are using [special resolve options](https://bitbucket.org/viewar_sf/viewar-webpack/src/master/src/webpack.config.resolve.js) like additional module directories,  
+you can add an `webpack.config.resolve.js` to your workspace root.
+
+the subpath to your resolver config can be set per env var `CONFIG_PATH`
+
+## prettier (optional)
 
 **prettier**
 
@@ -60,81 +126,16 @@
 
 ```
 
-### integration (VsCode)
-
-#### install extensions
-
-- "teeLang.vsprettier"
-- "dbaeumer.vscode-eslint"
-
-#### configure vscode
-
-```javascript
-// {workspace}/.vscode/settings.json
-{
-  "javascript.implicitProjectConfig.checkJs": true,
-  "javascript.validate.enable": false,
-  "javascript.format.enable": false,
-  "editor.defaultFormatter": "teeLang.vsprettier",
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false,
-    "editor.formatOnSaveTimeout": 500
-  },
-  "eslint.autoFixOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "eslint.run": "onType",
-  "eslint.lintTask.enable": true,
-  "eslint.workingDirectories": [{ "directory": ".", "changeProcessCWD": true }],
-  "vsprettier.packageManager": "npm",
-  "vsprettier.useEsLint": false,
-  "vsprettier.useStyleLint": true,
-  "vsprettier.requireConfig": true
-}
-
-```
-
-### TBD - prettier
-
-- provide export of .prettier
-  use `process.cwd()` for correct require-path!?
-
-## import resolvers
-
-### node
-
-```javascript
-{
-  paths:      [ './src' ],
-  extensions: [ '.js', '.jsx', '.json' ],
-}
-```
-
-### webpack
-
-as default we use just add the extensions:
-`{ extensions: ['.js', '.jsx', '.json'] }`
-
-if you are using [special resolve options](https://bitbucket.org/viewar_sf/viewar-webpack/src/master/src/webpack.config.resolve.js) like additional module directories,  
-you can add an `webpack.config.resolve.js` to your workspace root.
-
-the subpath to your resolver config can be set per env var `CONFIG_PATH`
-
 ## TODO
 
-- remove prettier-eslint
 - do not extend envs
 - export ? .vscode/settings
-- export .prettierrc
 - stage-lint
 - add eslint-plugin-jsdoc
-- move eslint/prettier RC files into /config
-  - add path to vscode settings
 
 ## ISSUES
 
-- `node/no-unpublished-require`  
-  `plugin:node/recommended` demands to have used modules in dependencies (!devDependencies)
-  atm, the rule is turned of
+**node/no-unpublished-require**  
+ `plugin:node/recommended` demands to have all  
+ used modules in dependencies (!devDependencies)  
+ atm, the rule is turned off due to webpack-resolver
