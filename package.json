@@ -1,12 +1,12 @@
 {
-  "name": "eslint-config-viewar",
+  "name": "@viewar/config-eslint",
   "version": "1.3.0",
   "description": "React boilerplate app for ViewAR SDK",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf build && rimraf bundle",
     "test": "mocha ./__tests__/run.js",
-    "format": "prettier --config ./.prettierrc './**/*.{css,scss,md,json}' --write && prettier-eslint --config ./.prettierrc --write \"**/*.*{js,jsx}\""
+    "lint": "prettier --config ./.prettierrc './**/*.{css,scss,md,json}' --write && prettier-eslint --config ./.prettierrc --write \"**/*.*{js,jsx}\""
   },
   "author": "Stefan Friedl <sf@viewar.com>",
   "license": "MIT",
@@ -32,7 +32,7 @@
   "engines": {
     "node": ">=10.0.0"
   },
-  "repository": "https://github.com/DoubleU23/eslint-config-viewar.git",
+  "repository": "https://github.com/viewar/config-eslint",
   "dependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.5.5",
