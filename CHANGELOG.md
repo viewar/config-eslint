@@ -1,37 +1,55 @@
 # Changelog
+
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
-# [1.3.0](https://github.com/doubleu23/eslint-config-viewar/compare/v1.2.2...v1.3.0) (2019-09-23)
+# [1.4.0](https://github.com/viewar/config-eslint/compare/v1.3.0...v1.4.0) (2019-10-11)
 
+### Bug Fixes
+
+- **CI:** allow dependabot PRs to run pipeline ([6fe8e83](https://github.com/viewar/config-eslint/commit/6fe8e83199c258a6bc956acd712d0e0690d3fa31))
+- **deps:** fix babelregister bug ([0db6f48](https://github.com/viewar/config-eslint/commit/0db6f480ed55678f13403b2317558683f76c1ca8))
+- **CI:** readd test job (+ trigger CI) ([45c2c4b](https://github.com/viewar/config-eslint/commit/45c2c4b2d76d8223e3f83e25aa8690e1df2900d8))
+- **getResolveConfigPath:** return false on catched MODULE_NOT_FOUND ([e8814a2](https://github.com/viewar/config-eslint/commit/e8814a2a6d9a316f865e7c0758d2751e78329973))
+- **release:** version number after reset ([fdedf32](https://github.com/viewar/config-eslint/commit/fdedf324ba6dbcb6df6b1b8417e8b6fcdf9687de))
 
 ### Features
 
-* **react-rules:** add first draft ([ee2657e](https://github.com/doubleu23/eslint-config-viewar/commit/ee2657e))
+- **semantic-release:** deploy per BB master push ([678dbb6](https://github.com/viewar/config-eslint/commit/678dbb6bc8d70d3c90be9bbc31bc94491ea6aa26))
+- **semantic-release:** runs per CI on branch "next" ([#2](https://github.com/viewar/config-eslint/issues/2)) ([6e6bb17](https://github.com/viewar/config-eslint/commit/6e6bb17f88117a266ba9d913c913a9db776f0ea2))
+- **CI:** use travis and migrate to /viewar ([#1](https://github.com/viewar/config-eslint/issues/1)) ([f58c051](https://github.com/viewar/config-eslint/commit/f58c051e624f3d6061936cb48633674f97192267))
 
-## [1.2.2](https://github.com/doubleu23/eslint-config-viewar/compare/v1.2.1...v1.2.2) (2019-09-20)
+# Changelog
 
+> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
-### Bug Fixes
-
-* **resolveConfig:** use fallback resolveConfig ([f549e4e](https://github.com/doubleu23/eslint-config-viewar/commit/f549e4e))
-
-## [1.2.1](https://github.com/doubleu23/eslint-config-viewar/compare/v1.2.0...v1.2.1) (2019-09-19)
-
-
-### Bug Fixes
-
-* **README:** change install URL to github ([febb43c](https://github.com/doubleu23/eslint-config-viewar/commit/febb43c))
-
-# [1.2.0](https://github.com/doubleu23/eslint-config-viewar/compare/v1.1.0...v1.2.0) (2019-09-18)
-
-### Bug Fixes
-
-- **CI:** readd test job (+ trigger CI) ([45c2c4b](https://github.com/doubleu23/eslint-config-viewar/commit/45c2c4b))
-- **release:** version number after reset ([fdedf32](https://github.com/doubleu23/eslint-config-viewar/commit/fdedf32))
+# [1.3.0](https://github.com/viewar/config-eslint/compare/v1.2.2...v1.3.0) (2019-09-23)
 
 ### Features
 
-- **semantic-release:** runs per CI on branch "next" ([#2](https://github.com/doubleu23/eslint-config-viewar/issues/2)) ([6e6bb17](https://github.com/doubleu23/eslint-config-viewar/commit/6e6bb17))
+- **react-rules:** add first draft ([ee2657e](https://github.com/viewar/config-eslint/commit/ee2657e))
+
+## [1.2.2](https://github.com/viewar/config-eslint/compare/v1.2.1...v1.2.2) (2019-09-20)
+
+### Bug Fixes
+
+- **resolveConfig:** use fallback resolveConfig ([f549e4e](https://github.com/viewar/config-eslint/commit/f549e4e))
+
+## [1.2.1](https://github.com/viewar/config-eslint/compare/v1.2.0...v1.2.1) (2019-09-19)
+
+### Bug Fixes
+
+- **README:** change install URL to github ([febb43c](https://github.com/viewar/config-eslint/commit/febb43c))
+
+# [1.2.0](https://github.com/viewar/config-eslint/compare/v1.1.0...v1.2.0) (2019-09-18)
+
+### Bug Fixes
+
+- **CI:** readd test job (+ trigger CI) ([45c2c4b](https://github.com/viewar/config-eslint/commit/45c2c4b))
+- **release:** version number after reset ([fdedf32](https://github.com/viewar/config-eslint/commit/fdedf32))
+
+### Features
+
+- **semantic-release:** runs per CI on branch "next" ([#2](https://github.com/viewar/config-eslint/issues/2)) ([6e6bb17](https://github.com/viewar/config-eslint/commit/6e6bb17))
 
 # 1.1.0 (2019-09-17)
 
