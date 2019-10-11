@@ -32,7 +32,7 @@
   "engines": {
     "node": ">=10.0.0"
   },
-  "repository": "https://github.com/DoubleU23/eslint-config-viewar.git",
+  "repository": "https://github.com/viewar/config-eslint",
   "dependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.5.5",
