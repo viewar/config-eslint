@@ -1,6 +1,6 @@
 {
-  "branch": "master",
-  "repositoryUrl": "https://github.com/doubleu23/eslint-config-viewar.git",
+  "branch": "next",
+  "repositoryUrl": "https://github.com/viewar/config-eslint.git",
   "plugins": [
    [
     "@semantic-release/commit-analyzer",
