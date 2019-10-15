@@ -39,3 +39,21 @@ describe('config is valid', () => {
     expect(result.errorCount).to.equal(0);
   });
 });
+
+
+describe('exports prettier config as js object', () => {
+  it('should import without error', (done) => {
+    try {
+      const prettierConfig = require('../prettier');
+    }
+    catch (err) {
+      done(err);
+    }
+    done();
+  });
+
+  it('should be an js object', () => {
+    const prettierConfig = require('../prettier');
+    expect(typeof prettierConfig).to.equal('object');
+  });
+});
