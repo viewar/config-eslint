@@ -87,7 +87,7 @@ module.exports = {
 
     // unsure - may be changed
     'react/jsx-props-no-spreading': [ 'warn' ],
-    'react/jsx-filename-extension': [ 'error', { extensions: [ '.jsx' ]}],
+    'react/jsx-filename-extension': [ 'error', { extensions: [ '.jsx', '.js', '.ts' ]}],
     'react/jsx-curly-newline':      [
       'error',
       {
