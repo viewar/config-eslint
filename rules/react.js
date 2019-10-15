@@ -96,7 +96,7 @@ module.exports = {
       },
     ],
     'react/jsx-max-props-per-line':    0,
-    'react/jsx-handler-names':         [ 'error' ],
+    'react/jsx-handler-names':         0,
     'react/jsx-child-element-spacing': 0,
     'react/react-in-jsx-scope':        [ 'error' ], // can be skipped with webpack global module!?
     'react/prefer-es6-class':          [ 'warn' ],
