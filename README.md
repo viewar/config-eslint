@@ -16,66 +16,57 @@
 
 ## Usage
 
-### installation (modules)
+### installation
 
-**config**  
-`npm i -D https://github.com/DoubleU23/eslint-config-viewar`
+`npm i -D eslint`  
+`npm i -D @viewar/config-eslint`
 
-### configuration (rc files)
+### configuration
 
 **eslint**
 
-```javascript
-// ROOT/.eslintrc
-{ "extends": ["viewar/env/react"] } // thats all!
+```json
+// {workspace}/.eslintrc
+{ "extends": ["@viewar/config-eslint/env/react"] }
 ```
 
 **prettier**
 
-> as this package is still in early stage,  
-> you'll need to add our prettierrc config manually
-
-```javascript
-// {workspace}/.prettierrc
-{
-  "printWidth": 90,
-  "tabWidth": 2,
-  "useTabs": false,
-  "singleQuote": true,
-  "trailingComma": "es5",
-  "arrowParens": "always",
-  "semi": true,
-  "bracketSpacing": true,
-  "proseWrap": "preserve",
-  "quoteProps": "as-needed",
-  "overrides": [
-    {
-      "files": "*.{js,jsx}",
-      "options": {
-        "parser": "babel"
-      }
-    }
-  ]
-}
-
+```js
+// {workspace}/prettier.config.js
+module.exports = require('@viewar/config-eslint/prettier');
 ```
 
 ### integration (VsCode)
 
 #### install extensions
 
-- "teeLang.vsprettier"
 - "dbaeumer.vscode-eslint"
+- "teeLang.vsprettier" _- optional_
 
 #### configure vscode
 
 ```javascript
 // {workspace}/.vscode/settings.json
 {
-  "javascript.implicitProjectConfig.checkJs": true,
-  "javascript.validate.enable": false,
-  "javascript.format.enable": false,
+  // PRETTIER
   "editor.defaultFormatter": "teeLang.vsprettier",
+  "vsprettier.requireConfig": true,
+  "vsprettier.packageManager": "npm",
+  "vsprettier.useEsLint": false,
+  "vsprettier.useStyleLint": true,
+  // ESLINT
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.run": "onType",
+  "eslint.lintTask.enable": true,
+  "eslint.workingDirectories": [{ "directory": ".", "changeProcessCWD": true }],
+  // VS CODE general
+  "javascript.implicitProjectConfig.checkJs": true,
+  // disable built in linter and formatter
+  "javascript.validate.enable": false,
+  "javascript.format.enable": false
+  // overwrite for react files
   "[javascriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnPaste": false,
@@ -83,23 +74,9 @@
     "editor.formatOnType": false,
     "editor.formatOnSaveTimeout": 500
   },
-  "eslint.autoFixOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "eslint.run": "onType",
-  "eslint.lintTask.enable": true,
-  "eslint.workingDirectories": [{ "directory": ".", "changeProcessCWD": true }],
-  "vsprettier.packageManager": "npm",
-  "vsprettier.useEsLint": false,
-  "vsprettier.useStyleLint": true,
-  "vsprettier.requireConfig": true
 }
 
 ```
-
-### TBD - prettier
-
-- provide export of .prettier
-  use `process.cwd()` for correct require-path!?
 
 ## import resolvers
 
@@ -124,17 +101,14 @@ the subpath to your resolver config can be set per env var `CONFIG_PATH`
 
 ## TODO
 
-- remove prettier-eslint
 - do not extend envs
 - export ? .vscode/settings
-- export .prettierrc
 - stage-lint
 - add eslint-plugin-jsdoc
-- move eslint/prettier RC files into /config
-  - add path to vscode settings
 
 ## ISSUES
 
-- `node/no-unpublished-require`  
-  `plugin:node/recommended` demands to have used modules in dependencies (!devDependencies)
-  atm, the rule is turned of
+**node/no-unpublished-require**  
+ `plugin:node/recommended` demands to have all  
+ used modules in dependencies (!devDependencies)  
+ atm, the rule is turned off due to webpack-resolver

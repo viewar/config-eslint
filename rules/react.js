@@ -77,17 +77,17 @@ module.exports = {
     'react/jsx-wrap-multilines': [
       'error',
       {
-        declaration:  'parens-new-line',
-        assignment:   'parens-new-line',
-        'return':     'parens-new-line',
-        arrow:        'parens-new-line',
-        condition:    'parens-new-line',
+        declaration: 'parens-new-line',
+        assignment:  'parens-new-line',
+        'return':      'parens-new-line',
+        arrow:       'parens-new-line',
+        condition:   'parens-new-line',
       },
     ],
 
     // unsure - may be changed
     'react/jsx-props-no-spreading': [ 'warn' ],
-    'react/jsx-filename-extension': [ 'error', { extensions: [ '.jsx' ]}],
+    'react/jsx-filename-extension': [ 'error', { extensions: [ '.jsx', '.js', '.ts' ]}],
     'react/jsx-curly-newline':      [
       'error',
       {
@@ -96,7 +96,7 @@ module.exports = {
       },
     ],
     'react/jsx-max-props-per-line':    0,
-    'react/jsx-handler-names':         [ 'error' ],
+    'react/jsx-handler-names':         0,
     'react/jsx-child-element-spacing': 0,
     'react/react-in-jsx-scope':        [ 'error' ], // can be skipped with webpack global module!?
     'react/prefer-es6-class':          [ 'warn' ],
