@@ -1,4 +1,20 @@
 # Changelog
+> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
+
+# [1.5.0](https://github.com/viewar/config-eslint/compare/v1.4.0...v1.5.0) (2019-10-15)
+
+
+### Bug Fixes
+
+* **jsx-filename-extension:** add '.js' to allowed file extensions ([4ac02c4](https://github.com/viewar/config-eslint/commit/4ac02c4631595299a3c530d26cc459a9064e655e))
+* **lint:** config and src path ([256f48c](https://github.com/viewar/config-eslint/commit/256f48ccc3a20126a0c64ee084640fcb449f39a7))
+
+
+### Features
+
+* **/prettier:** export `prettier.config.js` + added test ([a383a6d](https://github.com/viewar/config-eslint/commit/a383a6daabf218b6a0502992e8eb82c9d90995e4))
+
+# Changelog
 
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
