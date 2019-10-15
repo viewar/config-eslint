@@ -25,9 +25,16 @@
 
 **eslint**
 
-```javascript
+```json
 // {workspace}/.eslintrc
 { "extends": ["@viewar/config-eslint/env/react"] }
+```
+
+**prettier**
+
+```js
+// {workspace}/prettier.config.js
+module.exports = require('@viewar/config-eslint/prettier');
 ```
 
 ### integration (VsCode)
@@ -42,22 +49,12 @@
 ```javascript
 // {workspace}/.vscode/settings.json
 {
-  //
-  // PRETTIER - optional
-  // ignored unless you add prettier-config
+  // PRETTIER
   "editor.defaultFormatter": "teeLang.vsprettier",
   "vsprettier.requireConfig": true,
   "vsprettier.packageManager": "npm",
   "vsprettier.useEsLint": false,
   "vsprettier.useStyleLint": true,
-  // overwrite for react files
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false,
-    "editor.formatOnSaveTimeout": 500
-  },
   // ESLINT
   "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,
@@ -69,6 +66,14 @@
   // disable built in linter and formatter
   "javascript.validate.enable": false,
   "javascript.format.enable": false
+  // overwrite for react files
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.formatOnSaveTimeout": 500
+  },
 }
 
 ```
@@ -93,38 +98,6 @@ if you are using [special resolve options](https://bitbucket.org/viewar_sf/viewa
 you can add an `webpack.config.resolve.js` to your workspace root.
 
 the subpath to your resolver config can be set per env var `CONFIG_PATH`
-
-## prettier (optional)
-
-**prettier**
-
-> as this package is still in early stage,  
-> you'll need to add our prettierrc config manually
-
-```javascript
-// {workspace}/.prettierrc
-{
-  "printWidth": 90,
-  "tabWidth": 2,
-  "useTabs": false,
-  "singleQuote": true,
-  "trailingComma": "es5",
-  "arrowParens": "always",
-  "semi": true,
-  "bracketSpacing": true,
-  "proseWrap": "preserve",
-  "quoteProps": "as-needed",
-  "overrides": [
-    {
-      "files": "*.{js,jsx}",
-      "options": {
-        "parser": "babel"
-      }
-    }
-  ]
-}
-
-```
 
 ## TODO
 
