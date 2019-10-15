@@ -21,9 +21,9 @@ module.exports = {
     // 'engines' config is taken from package.js
     // engines: { node: '>=10.0.0' },
     node: {
-      paths:           [ '.' ],
-      resolvePaths:    [ CONSTANTS.paths.src, 'node_modules' ],
-      extensions:      [ ...CONSTANTS.extensions ],
+      paths:        [ '.' ],
+      resolvePaths: [ CONSTANTS.paths.src, 'node_modules' ],
+      extensions:   [ ...CONSTANTS.extensions ],
     },
     'import/resolver': {
       node: {

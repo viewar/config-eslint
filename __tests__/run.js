@@ -40,7 +40,6 @@ describe('config is valid', () => {
   });
 });
 
-
 describe('exports prettier config as js object', () => {
   it('should import without error', (done) => {
     try {

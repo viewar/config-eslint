@@ -1,7 +1,7 @@
 const path = require('path');
 
-const ROOT    = path.resolve(process.cwd());
-const paths   = {
+const ROOT = path.resolve(process.cwd());
+const paths = {
   root: ROOT,
   src:  path.resolve(process.env.WEBPACK_PATH || 'src'),
 };

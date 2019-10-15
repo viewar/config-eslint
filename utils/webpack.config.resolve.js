@@ -1,6 +1,5 @@
 const CONSTANTS = require('./constants');
 
-
 const resolveConfig = {
   resolve: {
     extensions: [ ...CONSTANTS.extensions.concat([ '*' ]) ],
