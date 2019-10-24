@@ -4,25 +4,25 @@ const getResolveConfigPath = require('../utils/getResolveConfigPath');
 
 module.exports = {
   env: {
-    es6: true,
-    node: true,
+    es6:     true,
+    node:    true,
     browser: false,
   },
-  parser: 'babel-eslint',
+  parser:        'babel-eslint',
   parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
+    ecmaVersion:  2020,
+    sourceType:   'module',
     ecmaFeatures: {
-      jsx: true,
+      jsx:     true,
       classes: true,
       modules: true,
     },
   },
   settings: {
     engines: { node: '>=12.0.0' },
-    react: {
+    react:   {
       createClass: 'createReactClass',
-      version: '16.0.9',
+      version:     '16.0.9',
       flowVersion: '0.53',
     },
     'import/resolver': {
@@ -30,13 +30,13 @@ module.exports = {
         // TODO: refactor check webpack config of workspace
         // and use it if it's no promise!? (also refactor webpack pckg)
         config: getResolveConfigPath(),
-        env: 'test',
+        env:    'development', // webpack env param
       }))(),
     },
   },
   // 'import/cache': { lifetime: 5 },
-  plugins: ['react'],
-  extends: [
+  plugins:   [ 'react' ],
+  'extends': [
     require.resolve('../env/node'),
     // RULES
     'plugin:react/recommended',
