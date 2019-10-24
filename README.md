@@ -19,15 +19,21 @@
 ### installation
 
 `npm i -D eslint`  
-`npm i -D @viewar/config-eslint`
+`npm i -D https://bitbucket.org/viewar_sf/eslint-config-viewar`  
+_(it's still in beta, and not published on GH)_
 
 ### configuration
 
 **eslint**
 
-```json
-// {workspace}/.eslintrc
-{ "extends": ["@viewar/config-eslint/env/react"] }
+```js
+// {workspace}/.eslintrc.js
+module.exports = {
+  extends: [require.resolve('./node_modules/@viewar/config-eslint/env/react')],
+};
+
+// {workspace}/.eslintrc (JSON)
+{extends: ["@viewar/config-eslint/env/react"]}
 ```
 
 **prettier**
