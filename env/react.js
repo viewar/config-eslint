@@ -26,8 +26,9 @@ module.exports = {
       flowVersion: '0.53',
     },
     'import/resolver': {
+      node:    false,
       webpack: (() => ({
-        // TODO: refactor check webpack config of workspace
+        // TODO: enhance check webpack config of workspace
         // and use it if it's no promise!? (also refactor webpack pckg)
         config: getResolveConfigPath(),
         env:    'test',
