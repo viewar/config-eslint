@@ -1,14 +1,13 @@
 const expect = require('chai').expect;
 const eslint = require('eslint');
 
-const startEngine = () => {
-  let error = false,
-      esLintInstance;
-
-  const CLIEngine = eslint.CLIEngine;
+let esLintInstance; // pseudo cache for testruns
+const CLIEngine = eslint.CLIEngine;
+const getInstanceOrError = () => {
+  let error = false;
 
   try {
-    esLintInstance = new CLIEngine({
+    esLintInstance = esLintInstance || new CLIEngine({
       useEslintrc: false,
       configFile:  './index.js',
       fix:         true,
@@ -26,22 +25,23 @@ const startEngine = () => {
 };
 
 // varifyConfig();
-describe('config is valid', () => {
-  let esLintInstance = startEngine();
+describe('[ESLINT] config is valid', () => {
+  let esLintInstance = getInstanceOrError();
 
-  it('should create an instance of eslint engine', () => {
+  it('create an instance of CLIEngine', () => {
     expect(esLintInstance instanceof Error).to.be.equal(false);
   });
 
-  it('should have no errors (ignore fixables!)', () => {
-    const result = esLintInstance.executeOnText('const foo = \'bar\'; window.alert(foo)');
-
+  it('run against test string', async () => {
+    const result = await esLintInstance.executeOnText(
+      'const foo = \'bar\'; window.alert(foo)'
+    );
     expect(result.errorCount).to.equal(0);
   });
 });
 
-describe('exports prettier config as js object', () => {
-  it('should import without error', (done) => {
+describe('[EXPORTS] exports are available', () => {
+  it('/prettier.js -> exports default as object', (done) => {
     let prettierConfig;
     try {
       prettierConfig = require('../prettier');
