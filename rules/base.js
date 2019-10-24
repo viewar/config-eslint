@@ -6,30 +6,30 @@ module.exports = {
      * otherwise you'll see eslint re-formating prettier changes
      */
     // printWidth
-    'max-len': ['warn', 120, { ignoreComments: true }],
-    indent: [
+    'max-len': [ 'warn', 120, { ignoreComments: true }],
+    indent:    [
       'error',
       2,
       {
         VariableDeclarator: {
-          var: 2,
-          let: 2,
-          const: 1,
+          'var':   2,
+          let:     2,
+          'const': 1,
         },
         ignoreComments: false,
       },
     ],
-    semi: ['error', 'always'], // prettier.semi
-    quotes: ['error', 'single'], // prettier.singleQuote
+    semi:            [ 'error', 'always' ], // prettier.semi
+    quotes:          [ 'error', 'single' ], // prettier.singleQuote
     'comma-spacing': [
       'error',
       {
         before: false,
-        after: true,
+        after:  true,
       },
     ],
-    'comma-dangle': ['error', 'always-multiline'], // prettier.trailingComma
-    'arrow-parens': ['error', 'always'], // prettier.arrowParens
+    'comma-dangle': [ 'error', 'always-multiline' ], // prettier.trailingComma
+    'arrow-parens': [ 'error', 'always' ], // prettier.arrowParens
 
     // format
     /**
@@ -39,7 +39,7 @@ module.exports = {
       'error',
       'as-needed',
       {
-        keywords: true,
+        keywords:    true,
         unnecessary: true,
       },
     ],
@@ -47,23 +47,23 @@ module.exports = {
       'error',
       {
         ObjectExpression: {
-          multiline: true,
-          consistent: true,
+          multiline:     true,
+          consistent:    true,
           minProperties: 2,
         },
         ObjectPattern: {
-          multiline: true,
-          consistent: true,
+          multiline:     true,
+          consistent:    true,
           minProperties: 4,
         },
         ImportDeclaration: {
-          multiline: true,
-          consistent: true,
+          multiline:     true,
+          consistent:    true,
           minProperties: 4,
         },
         ExportDeclaration: {
-          multiline: true,
-          consistent: true,
+          multiline:     true,
+          consistent:    true,
           minProperties: 2,
         },
       },
@@ -79,39 +79,39 @@ module.exports = {
       'always',
       {
         objectsInObjects: false,
-        arraysInObjects: false,
+        arraysInObjects:  false,
       },
     ],
     /**
      * ARRAYS
      */
-    'array-element-newline': ['error', 'consistent'],
-    'array-bracket-newline': ['error', 'consistent'],
+    'array-element-newline': [ 'error', 'consistent' ],
+    'array-bracket-newline': [ 'error', 'consistent' ],
     'array-bracket-spacing': [
       'error',
       'always',
       {
-        singleValue: true,
+        singleValue:     true,
         objectsInArrays: false,
-        arraysInArrays: false,
+        arraysInArrays:  false,
       },
     ],
     /**
      * FUNCTIONS
      */
-    'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
+    'brace-style':                 [ 'error', 'stroustrup', { allowSingleLine: true }],
     'space-before-function-paren': [
       'error',
       {
-        anonymous: 'never',
-        named: 'never',
+        anonymous:  'never',
+        named:      'never',
         asyncArrow: 'always',
       },
     ],
     'no-multiple-empty-lines': [
       'error',
       {
-        max: 2,
+        max:    2,
         maxEOF: 1,
       },
     ],
@@ -119,10 +119,10 @@ module.exports = {
       'error',
       {
         exceptions: {
-          VariableDeclarator: true,
-          ImportDeclaration: true,
+          VariableDeclarator:   true,
+          ImportDeclaration:    true,
           AssignmentExpression: true,
-          ClassProperty: true,
+          ClassProperty:        true,
         },
       },
     ],
@@ -140,17 +140,17 @@ module.exports = {
       {
         singleLine: {
           beforeColon: false,
-          afterColon: true,
+          afterColon:  true,
         },
         multiLine: {
           beforeColon: false,
-          afterColon: true,
+          afterColon:  true,
         },
         align: {
           beforeColon: false,
-          afterColon: true,
-          mode: 'minimum',
-          on: 'value',
+          afterColon:  true,
+          mode:        'minimum',
+          on:          'value',
         },
       },
     ],
@@ -158,7 +158,7 @@ module.exports = {
       'error',
       {
         before: true,
-        after: true,
+        after:  true,
       },
     ],
   },
