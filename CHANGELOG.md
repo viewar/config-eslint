@@ -1,12 +1,12 @@
 # Changelog
+
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
 ## [1.5.1](https://github.com/viewar/config-eslint/compare/v1.5.0...v1.5.1) (2019-10-24)
 
-
 ### Bug Fixes
 
-* disable 'node/no-missing-import' as a workaround for [#8](https://github.com/viewar/config-eslint/issues/8) ([d7efcc6](https://github.com/viewar/config-eslint/commit/d7efcc6fa588b0b3d3f88dfc0f4dc358360bfd3c))
+- disable 'node/no-missing-import' as a workaround for [#8](https://github.com/viewar/config-eslint/issues/8) ([d7efcc6](https://github.com/viewar/config-eslint/commit/d7efcc6fa588b0b3d3f88dfc0f4dc358360bfd3c))
 
 # Changelog
 
