@@ -1,0 +1,49 @@
+version: 2.1
+jobs:
+  test:
+    docker:
+      - image: circleci/node:12.9.0
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: npm install
+      - run:
+          name: Test
+          command: npm run test
+  semantic_release:
+    docker:
+      - image: circleci/node:12.9.0
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: npm install
+      # uses GH_TOKEN
+      - run:
+          name: Release to GitHub
+          command: npx semantic-release
+  push_to_public:
+    docker:
+      - image: circleci/node:12.9.0
+    steps:
+      - checkout
+      # uses BB_APP_PW
+      - run:
+          name: Push Code to github/DoubleU23
+          command: git push https://doubleu23:${GH_TOKEN}@github.com/doubleu23/eslint-config-viewar.git
+      - run:
+          name: Push Code to github/DoubleU23
+          command: git push https://doubleu23viewar_sf:${GH_TOKEN}@github.com/doubleu23/eslint-config-viewar.git --tags
+
+workflows:
+  version: 2
+  lint_and_release:
+    jobs:
+      - test
+      - semantic_release:
+          requires:
+            - test
+          filters:
+            branches:
+              only: next

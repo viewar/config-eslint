@@ -1,4 +1,4 @@
-# eslint-config-viewar
+# @viewar/config-eslint
 
 [![Build Status](https://travis-ci.com/viewar/config-eslint.svg?token=9j4kv11sMyqyMRAPNQXm&branch=master)](https://travis-ci.com/viewar/config-eslint)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=viewar/config-eslint&identifier=214496490)](https://dependabot.com)
@@ -19,15 +19,21 @@
 ### installation
 
 `npm i -D eslint`  
-`npm i -D @viewar/config-eslint`
+`npm i -D https://bitbucket.org/viewar_sf/eslint-config-viewar`  
+_(it's still in beta, and not published on GH)_
 
 ### configuration
 
 **eslint**
 
-```json
-// {workspace}/.eslintrc
-{ "extends": ["@viewar/config-eslint/env/react"] }
+```js
+// {workspace}/.eslintrc.js
+module.exports = {
+  extends: [require.resolve('./node_modules/@viewar/config-eslint/env/react')],
+};
+
+// {workspace}/.eslintrc (JSON)
+{extends: ["@viewar/config-eslint/env/react"]}
 ```
 
 **prettier**

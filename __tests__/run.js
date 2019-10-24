@@ -42,17 +42,15 @@ describe('config is valid', () => {
 
 describe('exports prettier config as js object', () => {
   it('should import without error', (done) => {
+    let prettierConfig;
     try {
-      const prettierConfig = require('../prettier');
+      prettierConfig = require('../prettier');
     }
     catch (err) {
       done(err);
     }
-    done();
-  });
 
-  it('should be an js object', () => {
-    const prettierConfig = require('../prettier');
     expect(typeof prettierConfig).to.equal('object');
+    done();
   });
 });

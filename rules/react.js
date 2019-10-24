@@ -1,5 +1,10 @@
 module.exports = {
   rules: {
+    //* since we use config.resolve.modules for our alternate rel paths,
+    //* plugin-node triggers on importing without path-prefix;
+    //* workaround for #8
+    'node/no-missing-import': 0,
+
     'react/jsx-closing-bracket-location': [ 1, 'line-aligned' ],
 
     'react/default-props-match-prop-types':       [ 'warn' ],
