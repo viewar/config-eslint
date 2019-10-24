@@ -19,7 +19,7 @@
 ### installation
 
 `npm i -D eslint`  
-`npm i -D https://bitbucket.org/viewar_sf/eslint-config-viewar`  
+`npm i -D https://gthub.com/doubleu23/eslint-config-viewar`  
 _(it's still in beta, and not published on GH)_
 
 ### configuration
