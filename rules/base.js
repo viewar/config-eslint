@@ -129,9 +129,9 @@ module.exports = {
     'one-var': [
       'error',
       {
-        const: 'never',
-        var: 'consecutive',
-        let: 'consecutive',
+        'const':            'never',
+        'var':              'consecutive',
+        let:              'consecutive',
         separateRequires: true,
       },
     ],

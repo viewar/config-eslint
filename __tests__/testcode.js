@@ -9,14 +9,14 @@ const myObject = {
 };
 
 const test = () => {
-  if (myObject == 'test') {
+  if (myObject === 'test') {
     const test1 = true;
     const test2 = false;
   }
   console.log('failedImportNamed :', failedImportNamed);
 
-  const test = true,
-    test2 = false;
+  const test = true;
+  const test2 = false;
 };
 
 const testObject = {
