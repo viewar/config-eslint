@@ -19,12 +19,6 @@
 
 - **/prettier:** export `prettier.config.js` + added test ([a383a6d](https://github.com/viewar/config-eslint/commit/a383a6daabf218b6a0502992e8eb82c9d90995e4))
 
-# Changelog
-
-> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
-
-# [1.4.0](https://github.com/viewar/config-eslint/compare/v1.3.0...v1.4.0) (2019-10-11)
-
 # [1.3.0](https://github.com/viewar/config-eslint/compare/v1.2.2...v1.3.0) (2019-09-23)
 
 - **CI:** allow dependabot PRs to run pipeline ([6fe8e83](https://github.com/viewar/config-eslint/commit/6fe8e83199c258a6bc956acd712d0e0690d3fa31))
@@ -38,10 +32,6 @@
 - **semantic-release:** deploy per BB master push ([678dbb6](https://github.com/viewar/config-eslint/commit/678dbb6bc8d70d3c90be9bbc31bc94491ea6aa26))
 - **semantic-release:** runs per CI on branch "next" ([#2](https://github.com/viewar/config-eslint/issues/2)) ([6e6bb17](https://github.com/viewar/config-eslint/commit/6e6bb17f88117a266ba9d913c913a9db776f0ea2))
 - **CI:** use travis and migrate to /viewar ([#1](https://github.com/viewar/config-eslint/issues/1)) ([f58c051](https://github.com/viewar/config-eslint/commit/f58c051e624f3d6061936cb48633674f97192267))
-
-# Changelog
-
-> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
 # [1.3.0](https://github.com/viewar/config-eslint/compare/v1.2.2...v1.3.0) (2019-09-23)
 
