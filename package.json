@@ -33,6 +33,18 @@
     "node": ">=10.0.0"
   },
   "repository": "https://github.com/viewar/config-eslint",
+  "files": [
+    "package.json",
+    "index.js",
+    ".eslintrc.js",
+    "prettier.js",
+    "README.md",
+    "CHANGELOG.md",
+    "env/**/*.js",
+    "rules/**/*.js",
+    "utils/**/*.js"
+  ],
+  "directories": {},
   "dependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.5.5",
