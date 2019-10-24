@@ -1,4 +1,4 @@
-# @viewar/config-eslint
+# eslint-config-viewar
 
 [![Build Status](https://travis-ci.com/viewar/config-eslint.svg?token=9j4kv11sMyqyMRAPNQXm&branch=master)](https://travis-ci.com/viewar/config-eslint)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=viewar/config-eslint&identifier=214496490)](https://dependabot.com)
@@ -28,19 +28,17 @@ _(it's still in beta, and not published on GH)_
 
 ```js
 // {workspace}/.eslintrc.js
-module.exports = {
-  extends: [require.resolve('./node_modules/@viewar/config-eslint/env/react')],
-};
+module.exports = { extends: ['viewar/env/react'] };
 
 // {workspace}/.eslintrc (JSON)
-{extends: ["@viewar/config-eslint/env/react"]}
+{ "extends": ["viewar/env/react"] }
 ```
 
 **prettier**
 
 ```js
 // {workspace}/prettier.config.js
-module.exports = require('@viewar/config-eslint/prettier');
+module.exports = require('viewar/prettier');
 ```
 
 ### integration (VsCode)
@@ -100,7 +98,7 @@ module.exports = require('@viewar/config-eslint/prettier');
 as default we use just add the extensions:
 `{ extensions: ['.js', '.jsx', '.json'] }`
 
-if you are using [special resolve options](https://bitbucket.org/viewar_sf/viewar-webpack/src/master/src/webpack.config.resolve.js) like additional module directories,  
+if you are using [special resolve options](https://github.com/viewar/webpack/blob/master/src/webpack.config.resolve.js) like additional module directories,  
 you can add an `webpack.config.resolve.js` to your workspace root.
 
 the subpath to your resolver config can be set per env var `CONFIG_PATH`
