@@ -1,4 +1,26 @@
 # Changelog
+> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
+
+# [1.6.0](https://github.com/viewar/config-eslint/compare/v1.5.1...v1.6.0) (2019-10-31)
+
+
+### Bug Fixes
+
+* add __tests__ to eslintignore ([624e044](https://github.com/viewar/config-eslint/commit/624e044500ba8f92820a445572a3c16714310c97))
+* **settings:** add `settings.engines` ([68836d2](https://github.com/viewar/config-eslint/commit/68836d2c2b879666221ff640d4d7b2cb4fa98fe4))
+* **install:** move eslint to dev- / peer-deps ([7446599](https://github.com/viewar/config-eslint/commit/7446599d819f4134e6d48c783bb14a57c6114d21))
+* **package:** prepare pckg to get published ([3c2679a](https://github.com/viewar/config-eslint/commit/3c2679acb7230fd0308f1dc351c186302a42fdb3))
+* rename to 'eslint-config-viewar' (eslint name convention) ([#11](https://github.com/viewar/config-eslint/issues/11)) ([249ca6d](https://github.com/viewar/config-eslint/commit/249ca6d19cb3fea671fc3b8aa3333ed26c32e9b2))
+* **CI:** run lint+test+release ([ebbc314](https://github.com/viewar/config-eslint/commit/ebbc314d561430ab6e7d15498722ebe33d319cc2))
+
+
+### Features
+
+* **rules:** allow static state vars  for react classes ([282b5bd](https://github.com/viewar/config-eslint/commit/282b5bdd054f57e307d6c5c9a0adfa3e02e1417f))
+* **rules:** disable 'no-use-before-define' for functions ([8da1263](https://github.com/viewar/config-eslint/commit/8da12631d444f04fc5f887097b81515de3cf3c93))
+* **npm:** publish to npm per 'semantic-release' ([7f48109](https://github.com/viewar/config-eslint/commit/7f48109c374f193e2dc445c6537561c71f31fedb))
+
+# Changelog
 
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
