@@ -9,6 +9,9 @@ jobs:
           name: Setup
           command: npm install
       - run:
+          name: Lint
+          command: npm run lint
+      - run:
           name: Test
           command: npm run test
   semantic_release:
@@ -23,18 +26,6 @@ jobs:
       - run:
           name: Release to GitHub
           command: npx semantic-release
-  push_to_public:
-    docker:
-      - image: circleci/node:12.9.0
-    steps:
-      - checkout
-      # uses BB_APP_PW
-      - run:
-          name: Push Code to github/DoubleU23
-          command: git push https://doubleu23:${GH_TOKEN}@github.com/doubleu23/eslint-config-viewar.git
-      - run:
-          name: Push Code to github/DoubleU23
-          command: git push https://doubleu23viewar_sf:${GH_TOKEN}@github.com/doubleu23/eslint-config-viewar.git --tags
 
 workflows:
   version: 2
@@ -47,9 +38,3 @@ workflows:
           filters:
             branches:
               only: next
-      - push_to_public:
-          requires:
-            - test
-          filters:
-            branches:
-              only: master
