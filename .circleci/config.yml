@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  test:
+  lint_and_build:
     docker:
       - image: circleci/node:12.9.0
     steps:
@@ -22,7 +22,9 @@ jobs:
       - run:
           name: Setup
           command: npm install
-      # uses GH_TOKEN
+      - run:
+          name: Install 'semantic-release' modules
+          command: npm i --no-save semantic-release-cli @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/github @semantic-release/npm @semantic-release/release-notes-generator
       - run:
           name: Release to GitHub
           command: npx semantic-release
