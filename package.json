@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-viewar",
+  "name": "@viewar/config-eslint",
   "version": "1.5.1",
   "description": "ViewAR's shareable config for EsLint",
   "main": "index.js",
@@ -33,6 +33,16 @@
     "node": ">=10.0.0"
   },
   "repository": "https://github.com/viewar/config-eslint",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "viewar",
+    "eslint",
+    "shared config",
+    "prettier"
+  ],
   "dependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.5.5",
