@@ -1,6 +1,20 @@
 # Changelog
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
+# [1.7.0](https://github.com/viewar/config-eslint/compare/v1.6.0...v1.7.0) (2019-10-31)
+
+
+### Bug Fixes
+
+* **deps:** add 'eslint-plugin-node' to save-deps ([2200cf3](https://github.com/viewar/config-eslint/commit/2200cf3bf3d0665e2e46136b737b0605b26d127b))
+* **package:** prepare pckg to get published ([2831830](https://github.com/viewar/config-eslint/commit/28318306008864b1c9e7ab04ca44277fdeabcb80))
+* **CI:** run lint+test+release ([5a69ea6](https://github.com/viewar/config-eslint/commit/5a69ea682e686a03d4415c55e4f24efd14214bb0))
+
+
+### Features
+
+* **npm:** publish to npm per 'semantic-release' ([443ad8a](https://github.com/viewar/config-eslint/commit/443ad8a1a52b1a0667865729015a281461d9aa0d))
+
 # [1.6.0](https://github.com/viewar/config-eslint/compare/v1.5.1...v1.6.0) (2019-10-31)
 
 
