@@ -4,6 +4,7 @@ module.exports = {
     //
     // import-rules of 'eslint-config-standard@1.4.1' (MIT license)
     //
+    'import/namespace':        'error',
     'import/export':           'error',
     'import/first':            'error',
     'import/no-absolute-path': [
