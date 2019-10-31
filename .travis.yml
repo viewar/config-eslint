@@ -26,7 +26,6 @@ branches:
 install: npm install
 
 script:
-  - npm run clean
   - npm run lint
   - npm run test
 # before_deploy:
