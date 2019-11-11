@@ -3,7 +3,6 @@
 
 # [1.7.0](https://github.com/viewar/config-eslint/compare/v1.6.0...v1.7.0) (2019-10-31)
 
-
 ### Bug Fixes
 
 * **deps:** add 'eslint-plugin-node' to save-deps ([2200cf3](https://github.com/viewar/config-eslint/commit/2200cf3bf3d0665e2e46136b737b0605b26d127b))
