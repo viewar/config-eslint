@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf build && rimraf bundle",
-    "test": "mocha ./__tests__/run.js",
+    "test": "npm run lint && npm run mocha",
+    "mocha": "mocha ./__tests__/run.js",
     "lint": "npx prettier **/*.{css,scss,md,json} --write && npx eslint --fix \"**/*.*{js,jsx}\""
   },
   "author": "Stefan Friedl <sf@viewar.com>",
