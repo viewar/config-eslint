@@ -2,6 +2,20 @@
 
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
+# [1.8.0](https://github.com/viewar/config-eslint/compare/v1.7.0...v1.8.0) (2019-11-18)
+
+
+### Bug Fixes
+
+* **exports:** remove '/prettier' - in favor of '/prettier.config'closes [#20](https://github.com/viewar/config-eslint/issues/20) ([9e69bb2](https://github.com/viewar/config-eslint/commit/9e69bb29d5ba142e72d46ad38bec318be27535c7))
+* rename to 'eslint-config-viewar' (eslint name convention) ([#11](https://github.com/viewar/config-eslint/issues/11)) ([843be87](https://github.com/viewar/config-eslint/commit/843be879e55dab23a09cb03d7f6eb85b11a9c096))
+
+
+### Features
+
+* **eslint-plugin-promise:** add rules for promise usage ([32b3d89](https://github.com/viewar/config-eslint/commit/32b3d89bc62bcfc33c11b2743efa2496e74ef343))
+* **CI:** use build stage for release ([f8c3e95](https://github.com/viewar/config-eslint/commit/f8c3e9507e7e14931714da43cd16ee1c4281b9a1))
+
 # [1.7.0](https://github.com/viewar/config-eslint/compare/v1.6.0...v1.7.0) (2019-10-31)
 
 ### Bug Fixes
