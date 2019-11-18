@@ -19,7 +19,6 @@
 
 ### installation
 
-`npm i -D eslint`  
 `npm i -D @viewar/config-eslint`
 
 ### configuration
