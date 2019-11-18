@@ -41,10 +41,10 @@ describe('[ESLINT] config is valid', () => {
 });
 
 describe('[EXPORTS] exports are available', () => {
-  it('/prettier.js -> exports default as object', (done) => {
+  it('/prettier.config.js -> exports default as object', (done) => {
     let prettierConfig;
     try {
-      prettierConfig = require('../prettier');
+      prettierConfig = require('../prettier.config');
     }
     catch (err) {
       done(err);
