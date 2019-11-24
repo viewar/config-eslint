@@ -26,10 +26,7 @@
 **eslint**
 
 ```js
-// {workspace}/.eslintrc.js
-module.exports = { extends: [require.resolve('@viewar/config-eslint')] };
-
-// {workspace}/.eslintrc (JSON)
+// {workspace}/.eslintrc
 { "extends": ["./node_modules/@viewar/config-eslint"] }
 ```
 
