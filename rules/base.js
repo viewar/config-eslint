@@ -12,10 +12,11 @@ module.exports = {
       2,
       {
         VariableDeclarator: {
-          'var':   2,
-          let:     2,
+          'var':   1,
+          let:     1,
           'const': 1,
         },
+        SwitchCase:     1,
         ignoreComments: false,
       },
     ],
