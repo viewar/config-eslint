@@ -107,6 +107,9 @@ module.exports = {
     'react/prefer-es6-class':          [ 'warn' ],
     'react/prefer-stateless-function': [ 'error', { ignorePureComponents: true }],
 
+    // * HOOKS
+    'react-hooks/rules-of-hooks':  'error',
+    'react-hooks/exhaustive-deps': 'warn',
     // TODO: coming soon (next version)
     // "react/jsx-fragments": ["error", "element"],
     // "react/jsx-no-useless-fragment": ["error"]

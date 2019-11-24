@@ -102,8 +102,7 @@ the subpath to your resolver config can be set per env var `CONFIG_PATH`
 ## TODO
 
 - do not extend envs
-- export ? .vscode/settings
-- stage-lint
+- ? export '.vscode/settings.json'
 - add eslint-plugin-jsdoc
 
 ## ISSUES
