@@ -36,7 +36,8 @@ module.exports = {
     'react/require-render-return':                [ 'error' ],
     'react/self-closing-comp':                    [ 'error' ],
     'react/sort-comp':                            [ 'error' ],
-    'react/state-in-constructor':                 [ 'error' ],
+    // allow static state var
+    'react/state-in-constructor':                 0,
     'react/static-property-placement':            [ 'error' ],
     'react/style-prop-object':                    [ 'error' ],
     'react/void-dom-elements-no-children':        [ 'error' ],

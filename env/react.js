@@ -27,12 +27,12 @@ module.exports = {
     },
     'import/resolver': {
       node:    false,
-      webpack: (() => ({
+      webpack: {
         // TODO: enhance check webpack config of workspace
         // and use it if it's no promise!? (also refactor webpack pckg)
         config: getResolveConfigPath(),
         env:    'test',
-      }))(),
+      },
     },
   },
   // 'import/cache': { lifetime: 5 },

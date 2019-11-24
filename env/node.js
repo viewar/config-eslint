@@ -18,9 +18,8 @@ module.exports = {
     },
   },
   settings: {
-    // 'engines' config is taken from package.js
-    // engines: { node: '>=10.0.0' },
-    node: {
+    engines: { node: '>=10.0.0' },
+    node:    {
       paths:        [ '.' ],
       resolvePaths: [ CONSTANTS.paths.src, 'node_modules' ],
       extensions:   [ ...CONSTANTS.extensions ],

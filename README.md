@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/viewar/config-eslint.svg?token=9j4kv11sMyqyMRAPNQXm&branch=master)](https://travis-ci.com/viewar/config-eslint)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=viewar/config-eslint&identifier=214496490)](https://dependabot.com)
 [![PRs Welcome][pr-welcome]](http://makeapullrequest.com)<br />
+[![NPM Release](https://img.shields.io/npm/v/%40viewar%2Fconfig-eslint.svg?style=flat)](https://www.npmjs.com/package/%40viewar%2Fconfig-eslint)
 [![Conventional Commits](https://img.shields.io/badge/✔-Conventional%20Commits-blue.svg)](https://conventionalcommits.org)
 [![Semantic Versioning][semantic-img]][semantic-url]
 
@@ -18,9 +19,7 @@
 
 ### installation
 
-`npm i -D eslint`  
-`npm i -D https://bitbucket.org/viewar_sf/eslint-config-viewar`  
-_(it's still in beta, and not published on GH)_
+`npm i -D @viewar/config-eslint`
 
 ### configuration
 
@@ -28,10 +27,10 @@ _(it's still in beta, and not published on GH)_
 
 ```js
 // {workspace}/.eslintrc.js
-module.exports = { extends: ['viewar/env/react'] };
+module.exports = { extends: [require.resolve('@viewar/config-eslint')] };
 
 // {workspace}/.eslintrc (JSON)
-{ "extends": ["viewar/env/react"] }
+{ "extends": ["./node_modules/@viewar/config-eslint"] }
 ```
 
 **prettier**

@@ -1,47 +1,21 @@
 module.exports = {
   // add overwrites/additions for 'plugin:promise/recommended'
   rules: {
-    //
-    // promise-rules of 'eslint-config-standard@1.4.1' (MIT license)
-    //
-    'import/export':           'error',
-    'import/first':            'error',
-    'import/no-absolute-path': [
-      'error',
-      {
-        esmodule: true,
-        commonjs: true,
-        amd:      false,
-      },
-    ],
-    'import/no-duplicates':            'error',
-    'import/no-named-default':         'error',
-    'import/no-webpack-loader-syntax': 'error',
-    //
-    // custom promise-rules
-    //
-    'import/no-unresolved':            [
-      'error',
-      {
-        commonjs: true,
-        amd:      false,
-      },
-    ],
-    'import/order': [
-      2,
-      {
-        'newlines-between': 'always',
-        groups:             [ 'builtin', 'external', 'internal', 'parent', 'sibling', 'index' ],
-      },
-    ],
-    'sort-imports': [
-      2,
-      {
-        ignoreCase:            false,
-        ignoreDeclarationSort: true,
-        ignoreMemberSort:      true,
-        memberSyntaxSortOrder: [ 'single', 'all', 'multiple', 'none' ],
-      },
-    ],
+    'promise/always-return':   'error', // ensure return values
+    'promise/catch-or-return': 'error', // ensure error handling
+    'promise/no-return-wrap':  'error', // forbid return of resolve / reject
+    'promise/param-names':     'error', // enforce param naming: 'resolve()' and 'reject()'
+    'promise/no-new-statics':  'error', // dont use new keyword for static functions
+    'promise/valid-params':    'error', // call with the proper number of arguments
+
+    'promise/no-promise-in-callback': 'warn', // do not mix styles
+    'promise/no-callback-in-promise': 'warn', // do not mix styles
+    'promise/no-return-in-finally':   'warn', // finally-return never gets handled
+    'promise/no-nesting':             'warn', // use other paralell/seriell helpers like `Promise.all()`
+
+    'promise/no-native': 'off', // allow use of `Promise()` without import (injected by babel)
+
+    // ? TO BE RETHOUGHT
+    // 'promise/avoid-new':              'warn',
   },
 };

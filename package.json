@@ -1,11 +1,12 @@
 {
-  "name": "eslint-config-viewar",
-  "version": "1.5.0",
+  "name": "@viewar/config-eslint",
+  "version": "1.8.0",
   "description": "ViewAR's shareable config for EsLint",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf build && rimraf bundle",
-    "test": "mocha ./__tests__/run.js",
+    "test": "npm run lint && npm run mocha",
+    "mocha": "mocha ./__tests__/run.js",
     "lint": "npx prettier **/*.{css,scss,md,json} --write && npx eslint --fix \"**/*.*{js,jsx}\""
   },
   "author": "Stefan Friedl <sf@viewar.com>",
@@ -33,40 +34,43 @@
     "node": ">=10.0.0"
   },
   "repository": "https://github.com/viewar/config-eslint",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "viewar",
+    "eslint",
+    "shared config",
+    "prettier"
+  ],
   "dependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "babel-polyfill": "^6.26.0",
     "@babel/register": "^7.5.5",
-    "@semantic-release/changelog": "^3.0.4",
-    "@semantic-release/commit-analyzer": "^6.3.0",
-    "@semantic-release/git": "^7.0.16",
-    "@semantic-release/github": "^5.4.3",
-    "@semantic-release/npm": "^5.1.15",
-    "@semantic-release/release-notes-generator": "^7.3.0",
     "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
     "chalk": "^2.4.2",
-    "css-loader": "^3.2.0",
-    "eslint": "^6.3.0",
     "eslint-formatter-pretty": "^2.1.1",
-    "prettier": "^1.15.3",
+    "eslint-import-resolver-webpack": "^0.11.1",
+    "eslint-module-utils": "^2.4.1",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx": "^0.1.0",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-import-resolver-webpack": "^0.11.1",
-    "eslint-module-utils": "^2.4.1",
-    "eslint-plugin-import": "^2.18.2",
     "glob": "^7.1.4",
     "indent-string": "^4.0.0",
     "mocha": "^6.2.0",
+    "prettier": "^1.15.3",
     "prettier-eslint": "^9.0.0",
     "prettier-eslint-cli": "^5.0.0",
-    "rimraf": "^3.0.0",
-    "semantic-release-cli": "^5.2.1"
+    "rimraf": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
   }
 }

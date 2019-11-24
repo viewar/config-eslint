@@ -180,7 +180,7 @@ module.exports = {
     'no-use-before-define': [
       'error',
       {
-        functions: false,
+        functions: true,
         classes:   false,
         variables: false,
       },
