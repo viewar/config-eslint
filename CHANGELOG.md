@@ -2,6 +2,25 @@
 
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
+# [1.9.0](https://github.com/viewar/config-eslint/compare/v1.8.0...v1.9.0) (2019-11-24)
+
+
+### Bug Fixes
+
+* **indent:** fix 'indent' rule for 'SwitchCase' and var/let ([ce84466](https://github.com/viewar/config-eslint/commit/ce8446629a261488f163c12901a2dbd717d9f8b3))
+* **exports:** remove '/prettier' - in favor of '/prettier.config'closes [#20](https://github.com/viewar/config-eslint/issues/20) ([c154d42](https://github.com/viewar/config-eslint/commit/c154d423126597be35931e2eed0148d792dc1646))
+* **rules:** remove deprecated rule 'react/jsx-space-before-closing' ([861d0bb](https://github.com/viewar/config-eslint/commit/861d0bb634ebf87da87f855c95f689cebc160045)), closes [#24](https://github.com/viewar/config-eslint/issues/24)
+* rename to 'eslint-config-viewar' (eslint name convention) ([0edf8f7](https://github.com/viewar/config-eslint/commit/0edf8f77f5f5eeabdb23d15c202cc61ca04f245e))
+* **CI:** use travis, as repo is now 'public' ([1630a1d](https://github.com/viewar/config-eslint/commit/1630a1d5df9962d52c49733923f29d89446d74ae))
+
+
+### Features
+
+* **release:** add 'semantic-release-slack-bot' ([af9919c](https://github.com/viewar/config-eslint/commit/af9919ca5dc346ec954d2cf04a4c0015dcc2028f))
+* **eslint-plugin-promise:** add rules for promise usage ([cf197e3](https://github.com/viewar/config-eslint/commit/cf197e34d3bd97ca12582de283535fbd8651fbe0))
+* **env:** make 'react' the default env ([a4a058b](https://github.com/viewar/config-eslint/commit/a4a058b176a3f365c5bd60393775cf6e3d708c40))
+* **CI:** use build stage for release ([2a49c29](https://github.com/viewar/config-eslint/commit/2a49c29fc42183d675b44b6ff44c54598bf6466d))
+
 # [1.8.0](https://github.com/viewar/config-eslint/compare/v1.7.0...v1.8.0) (2019-11-18)
 
 ### Bug Fixes
