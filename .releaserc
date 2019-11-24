@@ -49,11 +49,19 @@
           "CHANGELOG.md",
           "package.json"
         ],
-        "message": "chore(release): 🔖 ${nextRelease.version} 🚀 released by 🤖 'semantic-release' via 👷 CircleCI \n\n${nextRelease.notes}"
+        "message": "chore(release): 🤖🔖🚀 v${nextRelease.version} \n\n${nextRelease.notes}"
       }
     ],
     [
       "@semantic-release/github"
+    ],
+    [
+      "semantic-release-slack-bot",
+      {
+        "notifyOnSuccess": true,
+        "notifyOnFail": false,
+        "markdownReleaseNotes": true
+      }
     ]
   ]
 }

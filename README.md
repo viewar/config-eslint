@@ -1,4 +1,4 @@
-# @viewar/config-eslint
+# eslint-config-viewar
 
 [![Build Status](https://travis-ci.com/viewar/config-eslint.svg?token=9j4kv11sMyqyMRAPNQXm&branch=master)](https://travis-ci.com/viewar/config-eslint)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=viewar/config-eslint&identifier=214496490)](https://dependabot.com)
@@ -19,7 +19,6 @@
 
 ### installation
 
-`npm i -D eslint`  
 `npm i -D @viewar/config-eslint`
 
 ### configuration
@@ -27,10 +26,7 @@
 **eslint**
 
 ```js
-// {workspace}/.eslintrc.js
-module.exports = { extends: [require.resolve('@viewar/config-eslint')] };
-
-// {workspace}/.eslintrc (JSON)
+// {workspace}/.eslintrc
 { "extends": ["./node_modules/@viewar/config-eslint"] }
 ```
 
@@ -38,7 +34,7 @@ module.exports = { extends: [require.resolve('@viewar/config-eslint')] };
 
 ```js
 // {workspace}/prettier.config.js
-module.exports = require('@viewar/config-eslint/prettier');
+module.exports = require('@viewar/config-eslint/prettier.config');
 ```
 
 ### integration (VsCode)

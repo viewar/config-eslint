@@ -68,7 +68,6 @@ module.exports = {
     'react/jsx-props-no-multi-spaces': [ 'error' ],
     'react/jsx-sort-default-props':    0,
     'react/jsx-sort-props':            0,
-    'react/jsx-space-before-closing':  [ 'error', 'always' ],
     'react/jsx-tag-spacing':           [
       'error',
       {
@@ -108,7 +107,7 @@ module.exports = {
     'react/prefer-es6-class':          [ 'warn' ],
     'react/prefer-stateless-function': [ 'error', { ignorePureComponents: true }],
 
-    // coming soon (next version)
+    // TODO: coming soon (next version)
     // "react/jsx-fragments": ["error", "element"],
     // "react/jsx-no-useless-fragment": ["error"]
     // DEPRECATED:

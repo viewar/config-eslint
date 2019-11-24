@@ -12,10 +12,11 @@ module.exports = {
       2,
       {
         VariableDeclarator: {
-          'var':   2,
-          let:     2,
+          'var':   1,
+          let:     1,
           'const': 1,
         },
+        SwitchCase:     1,
         ignoreComments: false,
       },
     ],
@@ -126,15 +127,16 @@ module.exports = {
         },
       },
     ],
-    'one-var': [
-      'error',
-      {
-        'const':            'never',
-        'var':              'consecutive',
-        let:              'consecutive',
-        separateRequires: true,
-      },
-    ],
+    'one-var':     0, // disabled due to team preferences
+    // [
+    // 'error',
+    // {
+    //   'const':            'never',
+    //   'var':              'consecutive',
+    //   let:              'consecutive',
+    //   separateRequires: true,
+    // },
+    // ],
     'key-spacing': [
       'error',
       {

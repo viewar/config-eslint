@@ -1,6 +1,6 @@
 {
   "name": "@viewar/config-eslint",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "ViewAR's shareable config for EsLint",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,11 @@
     "test": "npm run lint && npm run mocha",
     "mocha": "mocha ./__tests__/run.js",
     "lint": "npx prettier **/*.{css,scss,md,json} --write && npx eslint --fix \"**/*.*{js,jsx}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
   },
   "author": "Stefan Friedl <sf@viewar.com>",
   "license": "MIT",
@@ -50,13 +55,9 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.5.5",
     "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
-    "chalk": "^2.4.2",
-    "css-loader": "^3.2.0",
-    "eslint-formatter-pretty": "^2.1.1",
     "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-module-utils": "^2.4.1",
     "eslint-plugin-import": "^2.18.2",
@@ -73,6 +74,9 @@
     "rimraf": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.6.0"
+    "chalk": "^3.0.0",
+    "eslint": "^6.6.0",
+    "eslint-formatter-pretty": "^3.0.1",
+    "husky": "^3.1.0"
   }
 }
