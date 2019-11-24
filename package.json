@@ -9,6 +9,11 @@
     "mocha": "mocha ./__tests__/run.js",
     "lint": "npx prettier **/*.{css,scss,md,json} --write && npx eslint --fix \"**/*.*{js,jsx}\""
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  },
   "author": "Stefan Friedl <sf@viewar.com>",
   "license": "MIT",
   "babel": {
