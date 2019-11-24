@@ -34,7 +34,7 @@ describe('[ESLINT] config is valid', () => {
 
   it('run against test string', async () => {
     const result = await esLintInstance.executeOnText(
-      'const foo = \'bar\'; window.alert(foo)'
+      'const foo = \'bar\'; window.alert(foo)',
     );
     expect(result.errorCount).to.equal(0);
   });
