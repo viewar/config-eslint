@@ -126,15 +126,16 @@ module.exports = {
         },
       },
     ],
-    'one-var': [
-      'error',
-      {
-        'const':            'never',
-        'var':              'consecutive',
-        let:              'consecutive',
-        separateRequires: true,
-      },
-    ],
+    'one-var':     0, // disabled due to team preferences
+    // [
+    // 'error',
+    // {
+    //   'const':            'never',
+    //   'var':              'consecutive',
+    //   let:              'consecutive',
+    //   separateRequires: true,
+    // },
+    // ],
     'key-spacing': [
       'error',
       {
