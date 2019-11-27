@@ -36,7 +36,7 @@ module.exports = {
     },
   },
   // 'import/cache': { lifetime: 5 },
-  plugins:   [ 'react' ],
+  plugins:   [ 'react', 'react-hooks' ],
   'extends': [
     require.resolve('../env/node'),
     // RULES

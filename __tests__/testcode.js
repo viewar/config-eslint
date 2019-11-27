@@ -13,7 +13,6 @@ const test = () => {
     const test1 = true;
     const test2 = false;
   }
-  console.log('failedImportNamed :', failedImportNamed);
 
   const test = true;
   const test2 = false;
