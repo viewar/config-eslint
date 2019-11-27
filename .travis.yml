@@ -40,6 +40,8 @@ matrix:
     - os: osx
     - os: windows
 
+dist: trusty
+
 jobs:
   fast_finish: true
   allow_failures:
@@ -58,8 +60,6 @@ jobs:
       node_js: 12
       allow_failures: true
       fast_finish: true
-    - os: linux
-      dist: trusty
     - stage: release
       if: branch = next AND type IN (push) AND tag IS blank
       node_js: 12
