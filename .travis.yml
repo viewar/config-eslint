@@ -35,6 +35,15 @@ stages:
 
 jobs:
   include:
+    - stage: test
+      env: NODE_ENV=develop
+      node_js:
+        - 12
+        - 11
+        - 10
+    - stage: release
+      if: branch = next AND type IN (push) AND tag IS blank
+      node_js: 12
     - stage: release
       if: branch = next AND type IN (push) AND tag IS blank
       node_js: 12
