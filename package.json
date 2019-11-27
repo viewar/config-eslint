@@ -7,7 +7,7 @@
     "clean": "rimraf build && rimraf bundle",
     "test": "npm run lint && npm run mocha",
     "mocha": "mocha ./__tests__/run.js",
-    "lint": "npx prettier **/*.{css,scss,md,json} --write && npx eslint --fix \"**/*.*{js,jsx}\""
+    "lint": "npx prettier **/*.{css,scss,md,json} --write && npx eslint --fix \"**/*.*{js,jsx}\" --format pretty"
   },
   "husky": {
     "hooks": {

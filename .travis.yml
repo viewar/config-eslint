@@ -1,4 +1,5 @@
 dist: trusty # needed for headles chrome
+
 language: node_js
 cache:
   npm: true
@@ -15,6 +16,9 @@ branches:
     - /^v[0-9]+\.[0-9]+$/
 
 env: NODE_ENV=develop
+os:
+  - linux
+  - osx
 node_js:
   - 12
   - 11
@@ -32,7 +36,11 @@ jobs:
   fast_finish: true
   allow_failures:
     - node_js: 10
+    - os: osx
   include:
+    - stage: test
+      os: osx
+        - node_js: 12
     - stage: release
       if: branch = next AND type IN (push) AND tag IS blank
       node_js: 12
