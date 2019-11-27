@@ -39,18 +39,14 @@ module.exports = {
     'quote-props': [
       'error',
       'as-needed',
-      {
-        keywords:    true,
-        unnecessary: true,
-      },
+      { keywords: true, unnecessary: true },
     ],
     'object-curly-newline': [
-      'error',
-      {
+      'error', {
         ObjectExpression: {
           multiline:     true,
           consistent:    true,
-          minProperties: 2,
+          minProperties: 4,
         },
         ObjectPattern: {
           multiline:     true,
@@ -70,55 +66,39 @@ module.exports = {
       },
     ],
     'object-property-newline': [
-      'error',
-      {
-        allowMultiplePropertiesPerLine: false,
-      },
+      'error', { allowMultiplePropertiesPerLine: true },
     ],
     'object-curly-spacing': [
       'error',
       'always',
-      {
-        objectsInObjects: false,
-        arraysInObjects:  false,
-      },
+      { objectsInObjects: false, arraysInObjects: false },
     ],
     /**
      * ARRAYS
      */
     'array-element-newline': [ 'error', 'consistent' ],
-    'array-bracket-newline': [ 'error', 'consistent' ],
+    'array-bracket-newline': 0, // [ 'error', 'consistent' ],
     'array-bracket-spacing': [
       'error',
       'always',
-      {
-        singleValue:     true,
-        objectsInArrays: false,
-        arraysInArrays:  false,
-      },
+      { singleValue: true, objectsInArrays: false, arraysInArrays: false },
     ],
     /**
      * FUNCTIONS
      */
     'brace-style':                 [ 'error', 'stroustrup', { allowSingleLine: true }],
     'space-before-function-paren': [
-      'error',
-      {
+      'error', {
         anonymous:  'never',
         named:      'never',
         asyncArrow: 'always',
       },
     ],
     'no-multiple-empty-lines': [
-      'error',
-      {
-        max:    2,
-        maxEOF: 1,
-      },
+      'error', { max: 2, maxEOF: 1 },
     ],
     'no-multi-spaces': [
-      'error',
-      {
+      'error', {
         exceptions: {
           VariableDeclarator:   true,
           ImportDeclaration:    true,
@@ -138,8 +118,7 @@ module.exports = {
     // },
     // ],
     'key-spacing': [
-      'error',
-      {
+      'error', {
         singleLine: {
           beforeColon: false,
           afterColon:  true,
@@ -157,8 +136,7 @@ module.exports = {
       },
     ],
     'keyword-spacing': [
-      'error',
-      {
+      'error', {
         before: true,
         after:  true,
       },
