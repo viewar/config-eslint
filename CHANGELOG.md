@@ -2,6 +2,20 @@
 
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
+# [1.10.0](https://github.com/viewar/config-eslint/compare/v1.9.0...v1.10.0) (2019-11-27)
+
+
+### Bug Fixes
+
+* **deps:** add 'eslint-formatter-pretty' to save-deps ([be63bb7](https://github.com/viewar/config-eslint/commit/be63bb7fadb5f7d433a2e89ff7dd3b3d577f85d2))
+* **deps:** fix save-deps (eslint, and some plugins) ([3b4cba0](https://github.com/viewar/config-eslint/commit/3b4cba0fa12d5f77392400635468b224ee110862))
+
+
+### Features
+
+* **react-hooks:** add 'eslint-plugin-react-hooks' ([5f8e6e8](https://github.com/viewar/config-eslint/commit/5f8e6e84d933875b900934c7f4c4311bee70d426))
+* **CI:** test on linux, mac and windows ([2bfc2fd](https://github.com/viewar/config-eslint/commit/2bfc2fd4fc31d18b661f05bff7df4166be9ad484))
+
 # [1.9.0](https://github.com/viewar/config-eslint/compare/v1.8.0...v1.9.0) (2019-11-24)
 
 ### Bug Fixes
