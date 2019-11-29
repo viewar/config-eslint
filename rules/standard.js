@@ -99,7 +99,7 @@ module.exports = {
     'no-fallthrough':           'error',
     'no-floating-decimal':      'error',
     'no-func-assign':           'error',
-    'no-global-assign':         'error',
+    'no-global-assign':         [ 'error', { exceptions: [ 'Object' ]}],
     'no-implied-eval':          'error',
     'no-inner-declarations':    [ 'error', 'functions' ],
     'no-invalid-regexp':        'error',
