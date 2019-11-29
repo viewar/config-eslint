@@ -28,9 +28,9 @@ module.exports = {
   ],
 
   globals: {
-    document:  false,
-    navigator: false,
-    window:    false,
-    console:   false,
+    document:  'readonly',
+    navigator: 'readonly',
+    window:    'readonly',
+    console:   'readonly',
   },
 };
