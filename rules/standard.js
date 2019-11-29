@@ -139,7 +139,7 @@ module.exports = {
     'no-octal-escape':              'error',
     'no-path-concat':               'error',
     'no-proto':                     'error',
-    'no-redeclare':                 'error',
+    'no-redeclare':                 [ 'error', { builtinGlobals: true }],
     'no-regex-spaces':              'error',
     'no-return-assign':             [ 'error', 'except-parens' ],
     'no-return-await':              'error',
