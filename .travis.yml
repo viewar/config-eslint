@@ -9,7 +9,6 @@ cache:
 branches:
   only:
     - master
-    - next
     - develop
   except:
     - /^v[0-9]+\.[0-9]+$/
@@ -61,18 +60,14 @@ jobs:
       allow_failures: true
       fast_finish: true
     - stage: release
-      if: branch = next AND type IN (push) AND tag IS blank
+      if: branch = master AND type IN (push) AND tag IS blank AND (commit_message !~ /chore\(release\)/)
       node_js: 12
       script: skip
-      install: skip
-      before_deploy:
-        - npm i -g semantic-release
-        - npm i -g @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/changelog @semantic-release/npm @semantic-release/git @semantic-release/github semantic-release-slack-bot
+      install: npm i -g semantic-release @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/changelog @semantic-release/npm @semantic-release/git @semantic-release/github semantic-release-slack-bot
       deploy:
-        tags: false
         provider: script
-        skip_cleanup: true
+        cleanup: false
         script: npx semantic-release
         on:
-          branch: next
+          branch: master
           tags: false

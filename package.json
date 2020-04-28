@@ -41,7 +41,8 @@
   "repository": "https://github.com/viewar/config-eslint",
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "tag": "latest"
   },
   "keywords": [
     "viewar",
