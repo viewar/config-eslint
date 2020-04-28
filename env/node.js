@@ -32,6 +32,10 @@ module.exports = {
     },
     // 'import/cache': { lifetime: 5 },
   },
+  globals: {
+    global:  'readonly',
+    process: 'readonly',
+  },
   plugins:   [ 'promise', 'node', 'import' ],
   'extends': [
     require.resolve('../env/browser.js'),

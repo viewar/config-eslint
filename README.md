@@ -23,10 +23,17 @@
 
 ### configuration
 
-**eslint**
+**eslint** (_either JS or JSON_)
+
+**JS - {workspace}/.eslintrc.js:**
 
 ```js
-// {workspace}/.eslintrc
+module.exports = { extends: [require.resolve('@viewar/config-eslint')] };
+```
+
+**JSON - {workspace}/.eslintrc:**
+
+```json
 { "extends": ["./node_modules/@viewar/config-eslint"] }
 ```
 

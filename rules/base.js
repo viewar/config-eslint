@@ -141,5 +141,6 @@ module.exports = {
         after:  true,
       },
     ],
+    'no-implicit-globals': [ 'error', { lexicalBindings: false }],
   },
 };
