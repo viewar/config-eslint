@@ -41,7 +41,7 @@ module.exports = { extends: [require.resolve('@viewar/config-eslint')] };
 
 ```js
 // {workspace}/prettier.config.js
-module.exports = require('@viewar/config-eslint/prettier.config');
+module.exports = require('@viewar/config-eslint/prettier.config.js');
 ```
 
 ### integration (VsCode)
