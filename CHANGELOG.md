@@ -4,17 +4,15 @@
 
 # [1.10.0](https://github.com/viewar/config-eslint/compare/v1.9.0...v1.10.0) (2019-11-27)
 
-
 ### Bug Fixes
 
-* **deps:** add 'eslint-formatter-pretty' to save-deps ([be63bb7](https://github.com/viewar/config-eslint/commit/be63bb7fadb5f7d433a2e89ff7dd3b3d577f85d2))
-* **deps:** fix save-deps (eslint, and some plugins) ([3b4cba0](https://github.com/viewar/config-eslint/commit/3b4cba0fa12d5f77392400635468b224ee110862))
-
+- **deps:** add 'eslint-formatter-pretty' to save-deps ([be63bb7](https://github.com/viewar/config-eslint/commit/be63bb7fadb5f7d433a2e89ff7dd3b3d577f85d2))
+- **deps:** fix save-deps (eslint, and some plugins) ([3b4cba0](https://github.com/viewar/config-eslint/commit/3b4cba0fa12d5f77392400635468b224ee110862))
 
 ### Features
 
-* **react-hooks:** add 'eslint-plugin-react-hooks' ([5f8e6e8](https://github.com/viewar/config-eslint/commit/5f8e6e84d933875b900934c7f4c4311bee70d426))
-* **CI:** test on linux, mac and windows ([2bfc2fd](https://github.com/viewar/config-eslint/commit/2bfc2fd4fc31d18b661f05bff7df4166be9ad484))
+- **react-hooks:** add 'eslint-plugin-react-hooks' ([5f8e6e8](https://github.com/viewar/config-eslint/commit/5f8e6e84d933875b900934c7f4c4311bee70d426))
+- **CI:** test on linux, mac and windows ([2bfc2fd](https://github.com/viewar/config-eslint/commit/2bfc2fd4fc31d18b661f05bff7df4166be9ad484))
 
 # [1.9.0](https://github.com/viewar/config-eslint/compare/v1.8.0...v1.9.0) (2019-11-24)
 
@@ -68,19 +66,11 @@
 - **rules:** disable 'no-use-before-define' for functions ([8da1263](https://github.com/viewar/config-eslint/commit/8da12631d444f04fc5f887097b81515de3cf3c93))
 - **npm:** publish to npm per 'semantic-release' ([7f48109](https://github.com/viewar/config-eslint/commit/7f48109c374f193e2dc445c6537561c71f31fedb))
 
-# Changelog
-
-> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
-
 ## [1.5.1](https://github.com/viewar/config-eslint/compare/v1.5.0...v1.5.1) (2019-10-24)
 
 ### Bug Fixes
 
 - disable 'node/no-missing-import' as a workaround for [#8](https://github.com/viewar/config-eslint/issues/8) ([d7efcc6](https://github.com/viewar/config-eslint/commit/d7efcc6fa588b0b3d3f88dfc0f4dc358360bfd3c))
-
-# Changelog
-
-> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
 # [1.5.0](https://github.com/viewar/config-eslint/compare/v1.4.0...v1.5.0) (2019-10-15)
 
