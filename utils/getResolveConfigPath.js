@@ -26,6 +26,7 @@ const getResolveConfigPath = (pathToConfigs) => {
     if (e.code === 'MODULE_NOT_FOUND') {
       process.env.DEBUG &&
         console.log(
+          // eslint-disable-next-line max-len
           '\n[@viewar/webpack] Warning: webpack.config.resolve.js not found - using \'eslint-config-viewar/utils/webpack.config.resolve.js\'\n',
         );
     }
