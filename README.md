@@ -34,7 +34,7 @@ module.exports = { extends: [require.resolve('@viewar/config-eslint')] };
 **JSON - {workspace}/.eslintrc:**
 
 ```json
-{ "extends": ["./node_modules/@viewar/config-eslint"] }
+{ "extends": ["./node_modules/@viewar/config-eslint/index.js"] }
 ```
 
 **prettier**
