@@ -1,3 +1,5 @@
+const { assetExtensions } = require('../utils/constants');
+
 module.exports = {
   // add overwrites/additions for 'plugin:import/recommended'
   rules: {
@@ -26,6 +28,7 @@ module.exports = {
       {
         commonjs: true,
         amd:      false,
+        ignore:   assetExtensions,
       },
     ],
     'import/order': [

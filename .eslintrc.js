@@ -6,5 +6,5 @@ require('@babel/register', {
 });
 
 module.exports = {
-  extends: [require.resolve('./env/node.js')],
+  extends: [require.resolve('./env/react.js')],
 };

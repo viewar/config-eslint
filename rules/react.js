@@ -68,7 +68,6 @@ module.exports = {
     'react/jsx-props-no-multi-spaces': [ 'error' ],
     'react/jsx-sort-default-props':    0,
     'react/jsx-sort-props':            0,
-    'react/jsx-space-before-closing':  [ 'error', 'always' ],
     'react/jsx-tag-spacing':           [
       'error',
       {
@@ -108,7 +107,10 @@ module.exports = {
     'react/prefer-es6-class':          [ 'warn' ],
     'react/prefer-stateless-function': [ 'error', { ignorePureComponents: true }],
 
-    // coming soon (next version)
+    // * HOOKS
+    'react-hooks/rules-of-hooks':  'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    // TODO: coming soon (next version)
     // "react/jsx-fragments": ["error", "element"],
     // "react/jsx-no-useless-fragment": ["error"]
     // DEPRECATED:
@@ -118,5 +120,15 @@ module.exports = {
     // Definition for rule 'react/jsx-props-no-multi-spaces' was not found.eslint(react/jsx-props-no-multi-spaces)
     // Definition for rule 'react/jsx-props-no-spreading' was not found.eslint(react/jsx-props-no-spreading)
     // Definition for rule 'react/jsx-curly-newline' was not found.eslint(react/jsx-curly-newline)
+
+    // OVERWRITES
+    'no-use-before-define': [
+      'error',
+      {
+        functions: true,
+        classes:   true,
+        variables: true,
+      },
+    ],
   },
 };

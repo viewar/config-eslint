@@ -7,16 +7,19 @@ const path = require('path');
  */
 const getResolveConfigPath = (pathToConfigs) => {
   let resolvedPath;
+
+  // lookup workspace/webpack.config.resolve.js
+  // to be able to overwrite resolve config per project
   try {
     // get path
     resolvedPath = path.resolve(
       process.cwd(),
-      pathToConfigs || process.env.CONFIG_PATH || '',
+      pathToConfigs || '',
       './webpack.config.resolve.js',
     );
     process.env.DEBUG &&
       console.log(
-        '\n[@viewar/webpack] Info: try to load resolve config from:\n',
+        '\n[@viewar/config-eslint] Info: try to load resolve config from:\n',
         resolvedPath,
       );
     // verify if file is loadable
@@ -26,7 +29,8 @@ const getResolveConfigPath = (pathToConfigs) => {
     if (e.code === 'MODULE_NOT_FOUND') {
       process.env.DEBUG &&
         console.log(
-          '\n[@viewar/webpack] Warning: webpack.config.resolve.js not found - using \'eslint-config-viewar/utils/webpack.config.resolve.js\'\n',
+          // eslint-disable-next-line max-len
+          '\n[@viewar/config-eslint] webpack.config.resolve.js not found - using \'@viewar/config-eslint/utils/webpack.config.resolve.js\'\n',
         );
     }
     else {
@@ -34,12 +38,12 @@ const getResolveConfigPath = (pathToConfigs) => {
     }
 
     // return default resolve config
-    return path.resolve(__dirname, 'webpack.config.resolve.js');
+    resolvedPath = path.resolve(__dirname, 'webpack.config.resolve.js');
   }
 
   process.env.DEBUG &&
     console.log(
-      '\n[@viewar/webpack] Info: resolve config found under:\n',
+      '\n[@viewar/config-eslint] Info: resolve config found under:\n',
       resolvedPath,
       '\n',
     );

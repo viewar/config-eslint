@@ -10,6 +10,7 @@ module.exports = {
     'block-spacing': [ 'error', 'always' ],
     yoda:            [ 'error', 'never' ],
 
+
     'no-undefined':   'error', // use "null" instead of undefined
     'no-undef':       [ 'error' ],
     'no-unused-vars': [

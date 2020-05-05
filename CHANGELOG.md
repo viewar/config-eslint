@@ -2,32 +2,52 @@
 
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
-# [1.8.0](https://github.com/viewar/config-eslint/compare/v1.7.0...v1.8.0) (2019-11-18)
-
+# [1.10.0](https://github.com/viewar/config-eslint/compare/v1.9.0...v1.10.0) (2019-11-27)
 
 ### Bug Fixes
 
-* **exports:** remove '/prettier' - in favor of '/prettier.config'closes [#20](https://github.com/viewar/config-eslint/issues/20) ([9e69bb2](https://github.com/viewar/config-eslint/commit/9e69bb29d5ba142e72d46ad38bec318be27535c7))
-* rename to 'eslint-config-viewar' (eslint name convention) ([#11](https://github.com/viewar/config-eslint/issues/11)) ([843be87](https://github.com/viewar/config-eslint/commit/843be879e55dab23a09cb03d7f6eb85b11a9c096))
-
+- **deps:** add 'eslint-formatter-pretty' to save-deps ([be63bb7](https://github.com/viewar/config-eslint/commit/be63bb7fadb5f7d433a2e89ff7dd3b3d577f85d2))
+- **deps:** fix save-deps (eslint, and some plugins) ([3b4cba0](https://github.com/viewar/config-eslint/commit/3b4cba0fa12d5f77392400635468b224ee110862))
 
 ### Features
 
-* **eslint-plugin-promise:** add rules for promise usage ([32b3d89](https://github.com/viewar/config-eslint/commit/32b3d89bc62bcfc33c11b2743efa2496e74ef343))
-* **CI:** use build stage for release ([f8c3e95](https://github.com/viewar/config-eslint/commit/f8c3e9507e7e14931714da43cd16ee1c4281b9a1))
+- **react-hooks:** add 'eslint-plugin-react-hooks' ([5f8e6e8](https://github.com/viewar/config-eslint/commit/5f8e6e84d933875b900934c7f4c4311bee70d426))
+- **CI:** test on linux, mac and windows ([2bfc2fd](https://github.com/viewar/config-eslint/commit/2bfc2fd4fc31d18b661f05bff7df4166be9ad484))
+
+# [1.9.0](https://github.com/viewar/config-eslint/compare/v1.8.0...v1.9.0) (2019-11-24)
+
+### Bug Fixes
+
+- **indent:** fix 'indent' rule for 'SwitchCase' and var/let ([ce84466](https://github.com/viewar/config-eslint/commit/ce8446629a261488f163c12901a2dbd717d9f8b3))
+- **exports:** remove '/prettier' - in favor of '/prettier.config'closes [#20](https://github.com/viewar/config-eslint/issues/20) ([c154d42](https://github.com/viewar/config-eslint/commit/c154d423126597be35931e2eed0148d792dc1646))
+- **rules:** remove deprecated rule 'react/jsx-space-before-closing' ([861d0bb](https://github.com/viewar/config-eslint/commit/861d0bb634ebf87da87f855c95f689cebc160045)), closes [#24](https://github.com/viewar/config-eslint/issues/24)
+- rename to 'eslint-config-viewar' (eslint name convention) ([0edf8f7](https://github.com/viewar/config-eslint/commit/0edf8f77f5f5eeabdb23d15c202cc61ca04f245e))
+- **CI:** use travis, as repo is now 'public' ([1630a1d](https://github.com/viewar/config-eslint/commit/1630a1d5df9962d52c49733923f29d89446d74ae))
+
+# [1.8.0](https://github.com/viewar/config-eslint/compare/v1.7.0...v1.8.0) (2019-11-18)
+
+### Bug Fixes
+
+- **exports:** remove '/prettier' - in favor of '/prettier.config' ([9e69bb2](https://github.com/viewar/config-eslint/commit/9e69bb29d5ba142e72d46ad38bec318be27535c7))
+
+### Features
+
+- **release:** add 'semantic-release-slack-bot' ([af9919c](https://github.com/viewar/config-eslint/commit/af9919ca5dc346ec954d2cf04a4c0015dcc2028f))
+- **eslint-plugin-promise:** add rules for promise usage ([cf197e3](https://github.com/viewar/config-eslint/commit/cf197e34d3bd97ca12582de283535fbd8651fbe0))
+- **env:** make 'react' the default env ([a4a058b](https://github.com/viewar/config-eslint/commit/a4a058b176a3f365c5bd60393775cf6e3d708c40))
+- **CI:** use build stage for release ([2a49c29](https://github.com/viewar/config-eslint/commit/2a49c29fc42183d675b44b6ff44c54598bf6466d))
 
 # [1.7.0](https://github.com/viewar/config-eslint/compare/v1.6.0...v1.7.0) (2019-10-31)
 
 ### Bug Fixes
 
-* **deps:** add 'eslint-plugin-node' to save-deps ([2200cf3](https://github.com/viewar/config-eslint/commit/2200cf3bf3d0665e2e46136b737b0605b26d127b))
-* **package:** prepare pckg to get published ([2831830](https://github.com/viewar/config-eslint/commit/28318306008864b1c9e7ab04ca44277fdeabcb80))
-* **CI:** run lint+test+release ([5a69ea6](https://github.com/viewar/config-eslint/commit/5a69ea682e686a03d4415c55e4f24efd14214bb0))
-
+- **deps:** add 'eslint-plugin-node' to save-deps ([2200cf3](https://github.com/viewar/config-eslint/commit/2200cf3bf3d0665e2e46136b737b0605b26d127b))
+- **package:** prepare pckg to get published ([2831830](https://github.com/viewar/config-eslint/commit/28318306008864b1c9e7ab04ca44277fdeabcb80))
+- **CI:** run lint+test+release ([5a69ea6](https://github.com/viewar/config-eslint/commit/5a69ea682e686a03d4415c55e4f24efd14214bb0))
 
 ### Features
 
-* **npm:** publish to npm per 'semantic-release' ([443ad8a](https://github.com/viewar/config-eslint/commit/443ad8a1a52b1a0667865729015a281461d9aa0d))
+- **npm:** publish to npm per 'semantic-release' ([443ad8a](https://github.com/viewar/config-eslint/commit/443ad8a1a52b1a0667865729015a281461d9aa0d))
 
 # [1.6.0](https://github.com/viewar/config-eslint/compare/v1.5.1...v1.6.0) (2019-10-31)
 
@@ -46,19 +66,11 @@
 - **rules:** disable 'no-use-before-define' for functions ([8da1263](https://github.com/viewar/config-eslint/commit/8da12631d444f04fc5f887097b81515de3cf3c93))
 - **npm:** publish to npm per 'semantic-release' ([7f48109](https://github.com/viewar/config-eslint/commit/7f48109c374f193e2dc445c6537561c71f31fedb))
 
-# Changelog
-
-> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
-
 ## [1.5.1](https://github.com/viewar/config-eslint/compare/v1.5.0...v1.5.1) (2019-10-24)
 
 ### Bug Fixes
 
 - disable 'node/no-missing-import' as a workaround for [#8](https://github.com/viewar/config-eslint/issues/8) ([d7efcc6](https://github.com/viewar/config-eslint/commit/d7efcc6fa588b0b3d3f88dfc0f4dc358360bfd3c))
-
-# Changelog
-
-> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
 # [1.5.0](https://github.com/viewar/config-eslint/compare/v1.4.0...v1.5.0) (2019-10-15)
 
