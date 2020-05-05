@@ -2,6 +2,18 @@
 
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
+# [1.11.0](https://github.com/viewar/config-eslint/compare/v1.10.0...v1.11.0) (2020-05-05)
+
+
+### Bug Fixes
+
+* **release-process:** release on master branch ([27d8e30](https://github.com/viewar/config-eslint/commit/27d8e3001e2a5799e6532fd3d84ae773eada9a10))
+
+
+### Features
+
+* **module-resolvement:** use 'tsconfig.json' for webpack-resolver-config ([#53](https://github.com/viewar/config-eslint/issues/53)) ([e4b2fb3](https://github.com/viewar/config-eslint/commit/e4b2fb34eb90182448f7ec23d95cd9664942a2eb))
+
 # [1.10.0](https://github.com/viewar/config-eslint/compare/v1.9.0...v1.10.0) (2019-11-27)
 
 ### Bug Fixes
