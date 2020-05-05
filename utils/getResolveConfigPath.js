@@ -14,7 +14,7 @@ const getResolveConfigPath = (pathToConfigs) => {
     // get path
     resolvedPath = path.resolve(
       process.cwd(),
-      pathToConfigs || process.env.CONFIG_PATH || '',
+      pathToConfigs || '',
       './webpack.config.resolve.js',
     );
     process.env.DEBUG &&

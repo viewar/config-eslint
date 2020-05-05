@@ -131,8 +131,6 @@ module.exports = require('@viewar/config-eslint/prettier.config.js');
   - This config will also be used by '[@viewar/webpack](https://github.com/viewar/webpack)'
   - for more information see [webpack's resolve config](https://webpack.js.org/configuration/resolve/)
 
-the subpath to your resolver config can be set per env var `CONFIG_PATH`
-
 #### node
 
 > applied to env 'browser' and 'node'
