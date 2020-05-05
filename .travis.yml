@@ -1,5 +1,3 @@
-# dist: trusty # needed for headles chrome
-
 cache:
   npm: true
   directories:
@@ -13,52 +11,40 @@ branches:
   except:
     - /^v[0-9]+\.[0-9]+$/
 
-env: NODE_ENV=develop
-os:
-  - linux
-  - osx
-  - windows
 language: node_js
+
 node_js:
   - 12
   - 11
   - 10
 
-# explicit add default 'install' and 'script'
 install: npm install
 script: npm test
 
 stages:
   - test
   - release
+  # - merge
 
-matrix:
-  fast_finish: true
-  allow_failures:
-    - node_js: 10
-    - os: osx
-    - os: windows
+env: NODE_ENV=develop
 
-dist: trusty
-
+# stage test - no need to define
 jobs:
   fast_finish: true
   allow_failures:
     - node_js: 10
-    - os: osx
-    - os: windows
-  exclude:
-    - os: osx
-    - os: windows
+    - os: windows # Windows builds are in early access stage.
+    # - os: osx
   include:
+    - os: linux
+      node_js:
+        - 12
+        - 11
+        - 10
     - os: osx
       node_js: 12
-      allow_failures: true
-      fast_finish: true
     - os: windows
       node_js: 12
-      allow_failures: true
-      fast_finish: true
     - stage: release
       if: branch = master AND type IN (push) AND tag IS blank AND (commit_message !~ /chore\(release\)/)
       node_js: 12
