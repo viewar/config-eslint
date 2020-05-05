@@ -120,5 +120,15 @@ module.exports = {
     // Definition for rule 'react/jsx-props-no-multi-spaces' was not found.eslint(react/jsx-props-no-multi-spaces)
     // Definition for rule 'react/jsx-props-no-spreading' was not found.eslint(react/jsx-props-no-spreading)
     // Definition for rule 'react/jsx-curly-newline' was not found.eslint(react/jsx-curly-newline)
+
+    // OVERWRITES
+    'no-use-before-define': [
+      'error',
+      {
+        functions: true,
+        classes:   true,
+        variables: true,
+      },
+    ],
   },
 };

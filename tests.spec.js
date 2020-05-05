@@ -1,15 +1,15 @@
+const { join } = require('path');
 const expect = require('chai').expect;
 const eslint = require('eslint');
 
 let esLintInstance; // pseudo cache for testruns
-const CLIEngine = eslint.CLIEngine;
 const getInstanceOrError = () => {
   let error = false;
 
   try {
-    esLintInstance = esLintInstance || new CLIEngine({
+    esLintInstance = esLintInstance || new eslint.CLIEngine({
       useEslintrc: false,
-      configFile:  './index.js',
+      configFile:  join(process.cwd(), './index.js'),
       fix:         true,
       rules:       {
         'eol-last': 0,
@@ -24,10 +24,9 @@ const getInstanceOrError = () => {
   return error || esLintInstance;
 };
 
-// varifyConfig();
-describe('[ESLINT] config is valid', () => {
-  let esLintInstance = getInstanceOrError();
+esLintInstance = getInstanceOrError();
 
+describe('[CONFIG] is valid', () => {
   it('create an instance of CLIEngine', () => {
     expect(esLintInstance instanceof Error).to.be.equal(false);
   });
@@ -40,11 +39,21 @@ describe('[ESLINT] config is valid', () => {
   });
 });
 
+describe('[ESLINT] execute on files', () => {
+  it('runs on JS files (\'./utils/**/*.js\')', async () => {
+    const result = await esLintInstance.executeOnFiles(
+      join(process.cwd(), './utils/**/*.js'),
+    );
+
+    expect(result.errorCount).to.equal(0);
+  });
+});
+
 describe('[EXPORTS] exports are available', () => {
   it('/prettier.config.js -> exports object as default', (done) => {
     let prettierConfig;
     try {
-      prettierConfig = require('../prettier.config');
+      prettierConfig = require('./prettier.config');
     }
     catch (err) {
       done(err);

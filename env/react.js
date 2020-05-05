@@ -28,18 +28,15 @@ module.exports = {
     'import/resolver': {
       node:    false,
       webpack: {
-        // TODO: enhance check webpack config of workspace
-        // and use it if it's no promise!? (also refactor webpack pckg)
         config: getResolveConfigPath(),
         env:    'test',
       },
     },
   },
-  // 'import/cache': { lifetime: 5 },
   plugins:   [ 'react', 'react-hooks' ],
   'extends': [
     require.resolve('../env/node'),
-    // RULES
+    // REACT RULES
     'plugin:react/recommended',
     require.resolve('../rules/react'),
   ],

@@ -8,10 +8,9 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
-    "editor.formatOnType": false,
-    "editor.formatOnSaveTimeout": 500
+    "editor.formatOnType": false
   },
-  "eslint.autoFixOnSave": true,
+  "editor.formatOnSaveTimeout": 500,
   "eslint.alwaysShowStatus": true,
   "eslint.run": "onType",
   "vsprettier.packageManager": "npm",

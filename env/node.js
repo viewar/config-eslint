@@ -3,9 +3,10 @@ const CONSTANTS = require('../utils/constants');
 module.exports = {
   env: {
     node:    true,
-    mocha:   true,
     es6:     false,
     browser: false,
+    mocha:   true,
+    jest:    true,
   },
   parser:        'babel-eslint',
   parserOptions: {
@@ -18,7 +19,8 @@ module.exports = {
     },
   },
   settings: {
-    engines: { node: '>=10.0.0' },
+    engines:          { node: '>=10.0.0' },
+    // TODO: maybe remove node-resolver
     node:    {
       paths:        [ '.' ],
       resolvePaths: [ CONSTANTS.paths.src, 'node_modules' ],
@@ -30,7 +32,6 @@ module.exports = {
         extensions: [ ...CONSTANTS.extensions ],
       },
     },
-    // 'import/cache': { lifetime: 5 },
   },
   globals: {
     global:  'readonly',
@@ -48,6 +49,4 @@ module.exports = {
     require.resolve('../rules/import.js'),
     require.resolve('../rules/node.js'),
   ],
-
-  rules: {},
 };

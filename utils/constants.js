@@ -8,7 +8,7 @@ const paths = {
 
 const CONSTANTS = {
   paths,
-  extensions:      [ '.js', '.jsx', '.json' ],
+  extensions:      [ '.js', '.jsx', '.ts', '.tsx', '.json' ],
   assetExtensions: [ '.png$', '.webp$', '.jpg$', 'gif', '.svg$', '.mp4$' ],
 };
 
