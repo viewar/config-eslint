@@ -7,7 +7,7 @@
     "clean": "rimraf build && rimraf bundle",
     "test": "npm run lint && npm run test:unit",
     "test:unit": "jest",
-    "lint": "npx prettier **/*.{css,scss,md,json} --write && npx eslint --fix \"**/*.*{js,jsx}\" --format pretty"
+    "lint": "eslint --fix \"**/*.*{js,jsx,ts,tsx}\" --ignore-pattern \"build/**/*\" && prettier \"**/*.{css,scss,md,json}\" --write"
   },
   "husky": {
     "hooks": {
@@ -55,22 +55,23 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "@babel/register": "^7.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
     "babel-eslint": "^10.1.0",
     "body-parser": "^1.19.0",
-    "chai": "^4.2.0",
-    "chalk": "^2.4.2",
     "eslint": "^6.8.0",
     "eslint-formatter-pretty": "^3.0.1",
     "eslint-import-resolver-node": "^0.3.3",
+    "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-module-utils": "^2.6.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx": "^0.1.0",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.1",
-    "prettier": "^1.15.3",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "prettier": "^2.0.5",
     "prettier-eslint": "^9.0.0",
     "prettier-eslint-cli": "^5.0.0",
     "pretty-quick": "^2.0.1",
@@ -80,8 +81,8 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chalk": "^4.0.0",
-    "husky": "^3.1.0",
-    "jest": "^24.9.0",
-    "mocha": "^6.2.3"
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "mocha": "^7.1.2"
   }
 }
