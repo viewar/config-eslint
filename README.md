@@ -16,6 +16,7 @@
 
 - [Installation](#installation)
 - [Configuration](#configuration)
+  - [NPM Lint Script](#npm-lint-script)
   - [Integration (VsCode)](#integration-vscode)
   - [Import Resolvers](#import-resolvers)
     - [webpack](#webpack)
@@ -53,6 +54,10 @@ module.exports = { extends: [require.resolve('@viewar/config-eslint')] };
 // {workspace}/prettier.config.js
 module.exports = require('@viewar/config-eslint/prettier.config.js');
 ```
+
+### NPM Lint Script
+
+`"lint": "eslint --fix --ext \".js,.jsx,.ts,.tsx\" . --quiet --format pretty && prettier **/*.{css,scss,md,json} --write"`
 
 ### Integration (VsCode)
 
