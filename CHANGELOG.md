@@ -2,6 +2,18 @@
 
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
+# [1.12.0](https://github.com/viewar/config-eslint/compare/v1.11.0...v1.12.0) (2020-05-06)
+
+
+### Bug Fixes
+
+* add ignorePatterns to react-env ([fa4509f](https://github.com/viewar/config-eslint/commit/fa4509fb0825a7c1269de2a1aca5f971a8f08913))
+
+
+### Features
+
+* **typescript-support:** override react env for '.ts?' files ([#57](https://github.com/viewar/config-eslint/issues/57)) ([dddd912](https://github.com/viewar/config-eslint/commit/dddd912e86a06f5715339ec63687adbe24cae03b))
+
 # [1.11.0](https://github.com/viewar/config-eslint/compare/v1.10.0...v1.11.0) (2020-05-05)
 
 
