@@ -68,8 +68,9 @@ module.exports = {
       },
     },
   ],
-  plugins:   [ 'react', 'react-hooks' ],
-  'extends': [
+  ignorePatterns: [ 'build/**/*', '**/*.html.esj' ],
+  plugins:        [ 'react', 'react-hooks' ],
+  'extends':      [
     require.resolve('../env/node'),
     // REACT RULES
     'plugin:react/recommended',
