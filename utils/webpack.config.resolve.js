@@ -17,13 +17,13 @@ try {
   tsconfigIsPresent = true;
 
   if (process.env.DEBUG) {
-    console.log('\n[@viewar/webpack] tsconfig is PRESENT, so we USE \'tsconfig-paths-webpack-plugin\'\n\n');
+    console.log('\n[@viewar/config-eslint] tsconfig is PRESENT, so we USE \'tsconfig-paths-webpack-plugin\'\n\n');
   }
 }
 catch (e) {
   tsconfigIsPresent = false;
   if (process.env.DEBUG) {
-    console.log('\n[@viewar/webpack] tsconfig is NOT PRESENT, so we DON\'T USE \'tsconfig-paths-webpack-plugin\'\n\n');
+    console.log('\n[@viewar/config-eslint] tsconfig is NOT PRESENT, so we DON\'T USE \'tsconfig-paths-webpack-plugin\'\n\n');
   }
 }
 
